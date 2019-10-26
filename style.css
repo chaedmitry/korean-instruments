@@ -1,1 +1,8 @@
-TBD
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap&subset=cyrillic,latin-ext');
+
+body {
+    font-family: Lora, serif;
+    font-size: 16px;
+    margin: 40px;
+    max-width: 100%;
+}
