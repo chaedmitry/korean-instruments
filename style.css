@@ -5,14 +5,47 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    margin: 40px;
-    max-width: 100%;
+    margin: 40px auto;
+    max-width: 1440px;
+    background: #fafafa;
 }
 
 h1 {
     font-weight: 400;
     font-size: 56px;
     line-height: 64px;  
+}
+
+#header {
+    margin-bottom: 56px;
+}
+
+#heading {
+    padding: 0 0 0 40px;
+    max-width: 50%;
+    text-align: left;
+    margin: 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#description {
+    padding: 8px 40px 8px 32px;
+    max-width: 50%;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    padding: 0px 40px 40px 0px;
+    align-content: center;
+}
+
+.instrument {
+    display: inline-block;
 }
 
 .hangeul {
