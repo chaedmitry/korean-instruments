@@ -1,53 +1,64 @@
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap&subset=cyrillic,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lora:400&display=swap&subset=cyrillic,latin-ext');
 
 body {
     font-family: 'Lora', serif;
     font-size: 16px;
     font-weight: 400;
+    -webkit-font-smoothing: antialiased;
     line-height: 24px;
-    margin: 40px auto;
+    margin: 0 auto;
     max-width: 1440px;
     background: #fafafa;
 }
-
+ul {
+    list-style: none;
+}
 h1 {
     font-weight: 400;
     font-size: 56px;
-    line-height: 64px;  
+    line-height: 64px;
 }
+
+/* Heading */
 
 #header {
-    margin-bottom: 56px;
+    margin: 40px 40px 56px 40px;
+    display: flex;
+    justify-content: flex-start;
 }
-
 #heading {
-    padding: 0 0 0 40px;
-    max-width: 50%;
-    text-align: left;
     margin: 0;
-    display: inline-block;
-    box-sizing: border-box;
+    flex: 1 1 60%;
+    padding-right: 40px;
+    box-sizing: border-box; /* to include padding in block width*/
+}
+#description {
+    margin: 8px 0 0 0;
+    flex: 1 1 40%;
 }
 
-#description {
-    padding: 8px 40px 8px 32px;
-    max-width: 50%;
-    text-align: left;
-    vertical-align: top;
-    display: inline-block;
-    margin: 0;
-    box-sizing: border-box;
-}
+/* Instruments grid */
 
 .grid {
-    padding: 0px 40px 40px 0px;
-    align-content: center;
+    margin: 0px 40px;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
-
 .instrument {
-    display: inline-block;
+    margin-bottom: 48px;
+    flex: 1 0 20%;
 }
-
+.empty { /* To limit items width that are less number than on previous row */
+    margin-bottom: 48px;
+    flex: 1 0 20%;
+    content: '';
+}
+.instr-name {
+    text-align: left;
+    margin: 0;
+}
 .hangeul {
     color: #8C8C8C;
 }
