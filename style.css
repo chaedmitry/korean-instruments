@@ -44,17 +44,39 @@ h1 {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 .instrument {
     margin-bottom: 48px;
-    flex: 1 0 20%;
+    flex-basis: 20%;
 }
 .empty { /* To limit items width that are less number than on previous row */
     margin-bottom: 48px;
-    flex: 1 0 20%;
     content: '';
+    flex-basis: 224px;
 }
+.illustration {
+    min-width: 224px;
+    min-height: 224px;
+    display: flex;
+}
+.icon {
+    display: block;
+    margin: auto;
+}
+.icon-geomungo {
+    margin-right: 33%;
+}
+.icon-ajaeng {
+    margin-right: 39.2%;
+}
+.icon-janggo {
+    margin-bottom: 15.2%;
+}
+.icon-jing {
+    margin-bottom: 4.5%;
+}
+
 .instr-name {
     text-align: left;
     margin: 0;
