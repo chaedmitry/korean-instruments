@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lora:400&display=swap&subset=cyrillic,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap&subset=cyrillic,latin-ext');
 
 body {
     font-family: 'Lora', serif;
@@ -10,29 +10,55 @@ body {
     max-width: 1440px;
     background: #fafafa;
 }
+
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 h1 {
     font-weight: 400;
     font-size: 56px;
     line-height: 64px;
 }
 
+h3 {
+    font-weight: 700;
+    font-size: inherit;
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #000;
+    border-bottom: 1px solid #8C8C8C;
+    text-decoration: none;
+}
+a:hover {
+    border-bottom: 1px solid #000;
+}
+
 /* Heading */
 
-#header {
+header {
     margin: 40px 40px 56px 40px;
     display: flex;
     justify-content: flex-start;
 }
-#heading {
+
+.heading {
     margin: 0;
     flex: 1 1 60%;
     padding-right: 40px;
     box-sizing: border-box; /* to include padding in block width*/
 }
-#description {
+
+.description {
     margin: 8px 0 0 0;
     flex: 1 1 40%;
 }
@@ -46,15 +72,18 @@ h1 {
     flex-flow: row wrap;
     justify-content: space-between;
 }
+
 .instrument {
     margin-bottom: 48px;
     flex-basis: 20%;
 }
+
 .empty { /* To limit items width that are less number than on previous row */
-    margin-bottom: 48px;
+    margin-bottom: 0;
     content: '';
     flex-basis: 20%;
 }
+
 .illustration {
     min-width: 224px;
     min-height: 224px;
@@ -114,6 +143,11 @@ h1 {
     text-align: left;
     margin: 0;
 }
+
 .hangeul {
     color: #8C8C8C;
+}
+
+footer {
+    margin: 80px 40px 40px 40px;
 }
