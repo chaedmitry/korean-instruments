@@ -53,16 +53,19 @@ h1 {
 .empty { /* To limit items width that are less number than on previous row */
     margin-bottom: 48px;
     content: '';
-    flex-basis: 224px;
+    flex-basis: 20%;
 }
 .illustration {
     min-width: 224px;
     min-height: 224px;
     display: flex;
+    position: relative;
 }
+
 .icon {
     display: block;
     margin: auto;
+    z-index: 1;
 }
 .icon-geomungo {
     margin-right: 33%;
@@ -75,6 +78,36 @@ h1 {
 }
 .icon-jing {
     margin-bottom: 4.5%;
+}
+.icon-buk {
+    margin-bottom: 6.8%;
+    margin-right: 8.9%;
+}
+.icon-taepyeongso {
+    margin-right: 39.3%;
+}
+
+.shape {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.shape-janggo {
+    top: 15%;
+    left: 15%;
+    transform: translate(-15%, -15%);
+}
+.shape-buk {
+    top: 50%;
+    left: 15%;
+    transform: translate(-15%, -50%);
+}
+.shape-sogo {
+    top: 15%;
+    left: 85%;
+    transform: translate(-85%, -15%);
 }
 
 .instr-name {
