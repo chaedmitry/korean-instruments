@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700&display=swap&subset=cyrillic,latin-ext');
 
-body {
+html {
     font-family: 'Lora', serif;
-    font-size: 16px;
+    font-size: 100%;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    line-height: 24px;
-    margin: 0 auto;
-    max-width: 1440px;
+    line-height: 1.5rem;
     background: #fafafa;
+}
+
+body {
+    margin: 0;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 ul {
@@ -19,15 +23,15 @@ ul {
 
 h1 {
     font-weight: 400;
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 3.5rem;
+    line-height: 4rem;
 }
 
 h3 {
     font-weight: 700;
     font-size: inherit;
-    margin-top: 24px;
-    margin-bottom: 4px;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
 }
 
 p {
@@ -46,7 +50,7 @@ a:hover {
 /* Heading */
 
 header {
-    margin: 40px 40px 56px 40px;
+    margin: 2.5rem 2.5rem 3rem 2.5rem;
     display: flex;
     justify-content: flex-start;
 }
@@ -54,19 +58,19 @@ header {
 .heading {
     margin: 0;
     flex: 1 1 60%;
-    padding-right: 40px;
+    padding-right: 2.5rem;
     box-sizing: border-box; /* to include padding in block width*/
 }
 
 .description {
-    margin: 8px 0 0 0;
+    margin: .5rem 0 0 0;
     flex: 1 1 40%;
 }
 
 /* Instruments grid */
 
 .grid {
-    margin: 0px 40px;
+    margin: 0 2.5rem;
     padding: 0;
     display: flex;
     flex-flow: row wrap;
@@ -74,14 +78,13 @@ header {
 }
 
 .instrument {
-    margin-bottom: 48px;
-    flex-basis: 20%;
+    margin-bottom: 3rem;
+    flex: 0 0 20%;
 }
-
 .empty { /* To limit items width that are less number than on previous row */
     margin-bottom: 0;
     content: '';
-    flex-basis: 20%;
+    flex: 0 0 20%;
 }
 
 .illustration {
@@ -100,20 +103,20 @@ header {
     margin-right: 33%;
 }
 .icon-ajaeng {
-    margin-right: 39.2%;
+    margin-right: 39%;
 }
 .icon-janggo {
-    margin-bottom: 15.2%;
+    margin-bottom: 15%;
 }
 .icon-jing {
     margin-bottom: 4.5%;
 }
 .icon-buk {
-    margin-bottom: 6.8%;
-    margin-right: 8.9%;
+    margin-bottom: 7%;
+    margin-right: 9%;
 }
 .icon-taepyeongso {
-    margin-right: 39.3%;
+    margin-right: 40%;
 }
 
 .shape {
@@ -149,5 +152,25 @@ header {
 }
 
 footer {
-    margin: 80px 40px 40px 40px;
+    margin: 5rem 2.5rem 2.5rem 2.5rem;
+}
+
+@media (max-width: 990px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    header {
+        display: block;
+        margin: 2rem 2rem 3rem 2rem;
+    }
+    .heading {
+        margin-bottom: .5rem;
+        padding: 0;
+    }
+    .description {
+        margin: 0;
+    }
+    .grid {
+        margin: 0 2rem;
 }
