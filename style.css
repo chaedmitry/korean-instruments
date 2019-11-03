@@ -32,6 +32,8 @@ h1 {
     margin: 0;
 }
 
+button:focus {outline:0;}
+
 h3 {
     font-weight: 700;
     font-size: inherit;
@@ -117,6 +119,18 @@ header {
     transform: translate(-85%, -15%);
 }
 
+.button-play {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.button-play:hover svg path, .button-play:hover, .icon-play:hover {
+    fill: #000;
+}
+
 .name {
     text-align: center;
     margin: 0;
@@ -130,7 +144,7 @@ footer {
     margin: 4rem 2.5rem 2.5rem 2.5rem;
 }
 
-@media (max-width: 1054px) {
+@media (max-width: 1054px) { /* 4 instruments in a row, header in 1 column*/
     h1 {
         font-size: 3rem;
         line-height: 3.5rem;
@@ -157,7 +171,7 @@ footer {
         margin: 3rem 2rem 2rem 2rem;
     }
 }
-@media (max-width: 920px) {
+@media (max-width: 920px) { /* 3 instruments in a row */
     .instrument {
         flex: 0 0 33%;
     }
@@ -171,7 +185,7 @@ footer {
         line-height: 3rem;
     }
 }
-@media (max-width: 462px) {
+@media (max-width: 462px) { /* 1 instrument in a row */
     header {
         margin: 1.5rem 1.5rem 2rem 1.5rem;
     }
@@ -189,8 +203,7 @@ footer {
         margin: 2rem 1.5rem 1.5rem 1.5rem;
     }
     .instrument {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         flex: 0 0 100%;
     }
-
 }
