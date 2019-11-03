@@ -41,7 +41,7 @@ h3 {
 
 a {
     color: #000;
-    border-bottom: 1px solid #8C8C8C;
+    border-bottom: 1px solid #cacaca;
     text-decoration: none;
 }
 a:hover {
@@ -84,7 +84,7 @@ header {
 }
 
 .illustration {
-    min-height: 224px;
+    height: 224px;
     display: flex;
     position: relative;
 }
@@ -92,11 +92,6 @@ header {
 .icon {
     margin: auto;
     z-index: 1;
-}
-.icon-gayageum { /* < Come back to this, try to remove fixed width from svg files, instead specify max sizes and width 100% to make it shrink when too small. Try this with shapes as well. Need to think how custom position them.*/
-    max-width:75px;
-    max-height:206px;
-    width: 100%; 
 }
 
 .shape {
@@ -122,8 +117,8 @@ header {
     transform: translate(-85%, -15%);
 }
 
-.instr-name {
-    text-align: left;
+.name {
+    text-align: center;
     margin: 0;
 }
 
@@ -180,6 +175,10 @@ footer {
     header {
         margin: 1.5rem 1.5rem 2rem 1.5rem;
     }
+    h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
     .grid {
         margin: 0 1.5rem;
     }
@@ -191,7 +190,7 @@ footer {
     }
     .instrument {
         margin-bottom: 1.5rem;
-        min-width: 4rem;
+        flex: 0 0 100%;
     }
 
 }
