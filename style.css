@@ -25,6 +25,15 @@ ul {
     margin: 0;
 }
 
+.nav-links {
+    display: block;
+    margin: 1rem 2.5rem 1rem 2.5rem;
+}
+.nav-item {
+    display: inline-block;
+    padding-right: 2rem;
+}
+
 h1 {
     font-weight: 400;
     font-size: 3.5rem;
@@ -53,7 +62,7 @@ a:hover {
 /* Heading */
 
 header {
-    margin: 2.5rem 2.5rem 3rem 2.5rem;
+    margin: 0 2.5rem 3rem 2.5rem;
     display: flex;
     justify-content: flex-start;
 }
@@ -145,13 +154,16 @@ footer {
 }
 
 @media (max-width: 1054px) { /* 4 instruments in a row, header in 1 column*/
+    .nav-links {
+        margin: 1rem 2rem 1rem 2rem;
+    }
     h1 {
         font-size: 3rem;
         line-height: 3.5rem;
     }
     header {
         display: block;
-        margin: 2rem 2rem 3rem 2rem;
+        margin: 0 2rem 3rem 2rem;
     }
     .heading {
         margin-bottom: 1rem;
@@ -186,8 +198,11 @@ footer {
     }
 }
 @media (max-width: 462px) { /* 1 instrument in a row */
+    .nav-links {
+        margin: 1rem 1.5rem 1rem 1.5rem;
+    }
     header {
-        margin: 1.5rem 1.5rem 2rem 1.5rem;
+        margin: 0 1.5rem 2rem 1.5rem;
     }
     h1 {
         font-size: 2rem;
