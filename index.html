@@ -3,7 +3,7 @@
 
 <head>
     <title>Sound of Korean Musical Instruments</title>
-    <link rel='stylesheet', href='style.css'></link>
+    <link rel='stylesheet', href='style.css'>
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -29,19 +29,19 @@
 
     <ul class='grid'>
         <li class='instrument gayageum'>
-            <audio id='track-gayageum' src='sounds/trackGayageum.mp3'></audio>
             <div class='illustration'>
                 <object type="image/svg+xml" data="img/shapes/gayageum-shape.svg" class='shape shape-gayageum'></object>
                 <object type="image/svg+xml" data="img/icons/gayageum-union.svg" class='icon icon-gayageum'></object>
             </div>
             <p class=name>
-                <button class="button-play button-play-gayageum" onclick = "document.getElementById('track-gayageum').play()">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="button-play button-play-gayageum" id='testplaypause' onclick="playPause()">
+                    <svg class='icon-play' id='testicon' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
                     </svg>
                 </button>
                 Gayageum <span class='hangeul'>가야금</span>
             </p>
+            <audio id='track-gayageum' src='sounds/trackGayageum.mp3'></audio>
         </li>
 
         <li class='instrument geomungo'>
@@ -240,6 +240,6 @@
             <p>Sounds from <a href='http://www.gugak.go.kr/' target="_blank">National Gugak Center</a>.<br>Designed by <a href='https://chae.design' target='_blank'>Dmitry Chae</a> in 2019.</p>
         </section>
     </footer>
-
 </body>
+<script type="text/javascript" src="script.js"></script>
 </html>
