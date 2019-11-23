@@ -33,15 +33,16 @@
                 <object type="image/svg+xml" data="img/shapes/gayageum-shape.svg" class='shape shape-gayageum'></object>
                 <object type="image/svg+xml" data="img/icons/gayageum-union.svg" class='icon icon-gayageum'></object>
             </div>
+            <audio id='trackGayageum' src='sounds/trackGayageum.mp3'></audio>
             <p class=name>
-                <button class="button-play button-play-gayageum" id='testplaypause' onclick="playPause()">
-                    <svg class='icon-play' id='testicon' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="button-play button-play-gayageum" onclick="playPause(trackGayageum)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
                     </svg>
                 </button>
                 Gayageum <span class='hangeul'>가야금</span>
             </p>
-            <audio id='track-gayageum' src='sounds/trackGayageum.mp3'></audio>
+            
         </li>
 
         <li class='instrument geomungo'>
@@ -49,8 +50,9 @@
                 <object type="image/svg+xml" data="img/shapes/geomungo-shape.svg" class='shape shape-geomungo'></object>
                 <object type="image/svg+xml" data="img/icons/geomungo-union.svg" class='icon icon-geomungo'></object>
             </div>
+            <audio id='trackGeomungo' src='sounds/trackGeomungo.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-geomungo">
+                <button class="button-play button-play-geomungo" onclick="playPause(trackGeomungo)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
                     </svg>

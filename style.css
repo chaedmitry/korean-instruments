@@ -112,21 +112,6 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-    .shape-janggo {
-        top: 15%;
-        left: 15%;
-        transform: translate(-15%, -15%);
-    }
-    .shape-buk {
-        top: 50%;
-        left: 15%;
-        transform: translate(-15%, -50%);
-    }
-    .shape-sogo {
-        top: 15%;
-        left: 85%;
-        transform: translate(-85%, -15%);
-    }
 
 .button-play {
     width: 1.5rem;
