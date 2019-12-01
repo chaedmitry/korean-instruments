@@ -1,17 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-    pauseAllTracks(document.body);
-  });
+document.addEventListener("DOMContentLoaded", 
+    function() {
+        pauseAllTracks(document.body);
+    }
+);
   
-  function pauseAllTracks (grid) {
-    grid.addEventListener("play", function(event) {
-    let allTracks = document.getElementsByTagName('audio');
-        for (let i = 0; i <= allTracks.length; i++) { 
-            if (allTracks[i] !== event.target) {
-                allTracks[i].pause();
-                allTracks[i].currentTime = 0;
-            }
-        }
-    }, true);
+function pauseAllTracks (grid) {
+    grid.addEventListener("play",
+        function() {
+        let allTracks = document.getElementsByTagName('audio');
+            for (let i = 0; i <= allTracks.length; i++) {
+            let track = allTracks[i]; 
+                if (track !== event.target) {
+                    track.pause();
+                    track.currentTime = 0;
+                }
+            }   
+        },
+    true);
 }
 
   function playPause(id) {
