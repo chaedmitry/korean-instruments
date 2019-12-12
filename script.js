@@ -9,7 +9,7 @@ function pauseAllTracks (grid) {
         function() {
         let allTracks = document.getElementsByTagName('audio');
             for (let i = 0; i <= allTracks.length; i++) {
-            let track = allTracks[i]; 
+            let track = allTracks[i];
                 if (track !== event.target) {
                     track.pause();
                     track.currentTime = 0;
@@ -19,6 +19,7 @@ function pauseAllTracks (grid) {
     true);
 }
 
-  function playPause(id) {
+function playPause(id) {
+    /*let playbutton = document.getElementById(id);*/
     id.paused ? id.play() : id.pause();
 }
