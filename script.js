@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",
         pauseAllTracks(document.body);
     }
 );
-  
+
 function pauseAllTracks (grid) {
     grid.addEventListener("play",
         function() {
@@ -19,7 +19,14 @@ function pauseAllTracks (grid) {
     true);
 }
 
-function playPause(id) {
-    /*let playbutton = document.getElementById(id);*/
-    id.paused ? id.play() : id.pause();
+function playPause(trackID, iconID) {
+    if (trackID.paused === true) {
+        trackID.play();
+        iconID.setAttribute('href',"#icon-pause");
+    } 
+    else {
+        trackID.pause();
+        iconID.setAttribute('href',"#icon-play");
+    }
 }
+

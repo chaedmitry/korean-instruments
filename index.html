@@ -16,6 +16,18 @@
 </head>
 
 <body>
+    <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <defs>
+            <g id='icon-play'>
+                <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+            </g>
+            <g id='icon-pause'>
+                <path d="M1.5 2C1.5 1.72386 1.72386 1.5 2 1.5H4C4.27614 1.5 4.5 1.72386 4.5 2V10C4.5 10.2761 4.27614 10.5 4 10.5H2C1.72386 10.5 1.5 10.2761 1.5 10V2Z" stroke="black"/>
+                <path d="M7.5 2C7.5 1.72386 7.72386 1.5 8 1.5H10C10.2761 1.5 10.5 1.72386 10.5 2V10C10.5 10.2761 10.2761 10.5 10 10.5H8C7.72386 10.5 7.5 10.2761 7.5 10V2Z" stroke="black"/>
+            </g>
+        </defs>
+    </svg>    
+
     <nav class='menu'>
         <ul class='nav-links'>
             <li class='nav-item'><a href='/korean-instruments/'>Instruments</a></li>
@@ -35,9 +47,9 @@
             </div>
             <audio id='trackGayageum' src='sounds/trackGayageum.mp3'></audio>
             <p class=name>
-                <button class="button-play button-play-gayageum" onclick="playPause(trackGayageum)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-gayageum" onclick="playPause(trackGayageum, playPauseGayageum)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playPauseGayageum' href='#icon-play'></use>
                     </svg>
                 </button>
                 Gayageum <span class='hangeul'>가야금</span>
@@ -256,6 +268,6 @@
             <p>Sounds from <a href='http://www.gugak.go.kr/' target="_blank">National Gugak Center</a>.<br>Designed by <a href='https://chae.design' target='_blank'>Dmitry Chae</a> in 2019.</p>
         </section>
     </footer>
-</body>
 <script type="text/javascript" src="script.js"></script>
+</body>
 </html>

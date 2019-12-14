@@ -131,7 +131,7 @@ header {
     border: none;
     cursor: pointer;
 }
-    .button-play:hover svg path, .button-play:hover, .icon-play:hover {
+    .button-play:hover svg use, .button-play:hover svg path, .button-play:hover, .icon-play:hover { /* remove path selector when use "use" in all instruments*/
         fill: #000;
     }
 
