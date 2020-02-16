@@ -79,9 +79,9 @@
                 <object type="image/svg+xml" data="img/icons/ajaeng-union.svg" class='icon icon-ajaeng'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-ajaeng">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-ajaeng" onclick="playPause(trackAjaeng, playAjaeng)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playAjaeng' href='#icon-play'></use>
                     </svg>
                 </button>
                 Ajaeng <span class='hangeul'>아쟁</span>
@@ -95,9 +95,9 @@
             </div>
             <audio id='trackHaegeum' src='sounds/trackHaegeum.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-haegeum" onclick="playPause(trackHaegeum)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-haegeum" onclick="playPause(trackHaegeum, playHaegeum)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playHaegeum' href='#icon-play'></use>
                     </svg>
                 </button>
                 Haegeum <span class='hangeul'>해금</span>
@@ -111,9 +111,9 @@
             </div>
             <audio id='trackJanggo' src='sounds/trackJanggo.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-janggo" onclick="playPause(trackJanggo)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-janggo" onclick="playPause(trackJanggo, playJanggo)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playJanggo' href='#icon-play'></use>
                     </svg>
                 </button>
                 Janggo <span class='hangeul'>장고</span>
@@ -127,9 +127,9 @@
             </div>
             <audio id='trackJing' src='sounds/trackJing.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-jing" onclick="playPause(trackJing)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-jing" onclick="playPause(trackJing, playJing)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playJing' href='#icon-play'></use>
                     </svg>
                 </button>
                 Jing <span class='hangeul'>징</span>
@@ -143,9 +143,9 @@
             </div>
             <audio id='trackBuk' src='sounds/trackBuk.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-buk" onclick="playPause(trackBuk)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-buk" onclick="playPause(trackBuk, playBuk)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playBuk' href='#icon-play'></use>
                     </svg>
                 </button>
                 Buk <span class='hangeul'>북</span>
@@ -159,9 +159,9 @@
             </div>
             <audio id='trackKkwaenggwari' src='sounds/trackKkwaenggwari.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-kkwaenggwari" onclick="playPause(trackKkwaenggwari)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-kkwaenggwari" onclick="playPause(trackKkwaenggwari, playKkwaengwari)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playKkwaengwari' href='#icon-play'></use>
                     </svg>
                 </button>
                 Kkwaenggwari <span class='hangeul'>꽹과리</span>
@@ -175,8 +175,8 @@
             </div>
             <p class='name'>
                 <button class="button-play button-play-sogo">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playSogo' href='#icon-play'></use>
                     </svg>
                 </button>
                 Sogo <span class='hangeul'>소고</span>
@@ -190,9 +190,9 @@
             </div>
             <audio id='trackDaegeum' src='sounds/trackDaegeum.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-daegeum" onclick="playPause(trackDaegeum)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-daegeum" onclick="playPause(trackDaegeum, playDaegeum)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playDaegeum' href='#icon-play'></use>
                     </svg>
                 </button>
                 Daegeum <span class='hangeul'>대금</span>
@@ -206,8 +206,8 @@
             </div>
             <p class='name'>
                 <button class="button-play button-play-taepyeongso">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playTaepyongso' href='#icon-play'></use>
                     </svg>
                 </button>
                 Taepyeongso <span class='hangeul'>태평소</span>
@@ -221,9 +221,9 @@
             </div>
             <audio id='trackDanso' src='sounds/trackDanso.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-danso" onclick="playPause(trackDanso)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-danso" onclick="playPause(trackDanso, playDanso)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playDanso' href='#icon-play'></use>
                     </svg>
                 </button>
                 Danso <span class='hangeul'>단소</span>
@@ -237,9 +237,9 @@
             </div>
             <audio id='trackHyangPiri' src='sounds/trackHyangPiri.mp3'></audio>
             <p class='name'>
-                <button class="button-play button-play-hyangpiri" onclick="playPause(trackHyangPiri)">
-                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-hyangpiri" onclick="playPause(trackHyangPiri, playHyangPiri)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <use id='playHyangPiri' href='#icon-play'></use>
                     </svg>
                 </button>
                 Hyang Piri <span class='hangeul'>향피리</span>

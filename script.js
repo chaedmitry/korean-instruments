@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded",
     }
 );
 
-var tracks = document.getElementsByTagName('audio');
-var icons = document.getElementsByTagName('use');
-var iconPlay = document.getElementById('icon-play');
-var iconPause = document.getElementById('icon-pause');
+let tracks = document.getElementsByTagName('audio');
+let icons = document.getElementsByTagName('use');
+let iconPlay = document.getElementById('icon-play');
+let iconPause = document.getElementById('icon-pause');
 
 function stopAnotherTrack (grid) { /* Stop all other tracks when click on play */
     grid.addEventListener("play",
