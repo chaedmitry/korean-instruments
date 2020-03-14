@@ -1,32 +1,34 @@
 document.addEventListener("DOMContentLoaded", 
     function() {
-        stopAnotherTrack(document.body);
         pauseToPlayOnEnd(document.body);
         pauseToPlayOnPause(document.body);
         playToPauseOnPlay(document.body);
     }
 );
 
-let tracks = document.getElementsByTagName('audio');
+//Audio
+let track = document.getElementById('track');
+
+//Icons
 let icons = document.getElementsByTagName('use');
 let iconPlay = document.getElementById('icon-play');
 let iconPause = document.getElementById('icon-pause');
 
-function stopAnotherTrack (grid) { /* Stop all other tracks when click on play */
-    grid.addEventListener("play",
-        function() {
-            for (let i = 0; i <= tracks.length; i++) {
-                if (tracks[i] !== event.target) {
-                    tracks[i].pause();
-                    tracks[i].currentTime = 0;
-                }
-            }   
-        },
-    true);
-}
+//Tracks paths
+let trackGayageum = 'sounds/trackGayageum.mp3';
+let trackGeomungo = 'sounds/trackGeomungo.mp3';
+let trackBuk = 'sounds/trackBuk.mp3';
+let trackDaegeum = 'sounds/trackDaegeum.mp3';
+let trackDanso = 'sounds/trackDanso.mp3';
+let trackHaegeum = 'sounds/trackHaegeum.mp3';
+let trackHyangPiri = 'sounds/trackHyangPiri.mp3';
+let trackJanggo = 'sounds/trackJanggo.mp3';
+let trackJing = 'sounds/trackJing.mp3';
+let trackKkwaenggwari = 'sounds/trackKkwaenggwari.mp3';
 
-function pauseToPlayOnEnd (tracks) {  /* Reset all icons to play when some audio ended */
-    tracks.addEventListener("ended",
+//Reset all icons to play when some audio ended
+function pauseToPlayOnEnd (track) {  
+    track.addEventListener("ended",
         function () {
             for (let i = 0; i <= icons.length; i++) {
                 icons[i].setAttribute('href',"#icon-play");
@@ -56,14 +58,8 @@ function playToPauseOnPlay (icons) {
     }, true);
 }
 
-function playPause(trackID, iconID) { 
-    if (trackID.paused) {
-        trackID.play();
-        iconID.setAttribute('href', '#icon-pause');
-    }
-    else {
-        trackID.pause();
-        iconID.setAttribute('href', '#icon-play');
-    }
+function playPause(trackID) { 
+        track.src = trackID;
+        track.play();
 }
 
