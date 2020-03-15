@@ -9,19 +9,19 @@ document.addEventListener("DOMContentLoaded",
 //Audio
 let track = document.getElementById('track');
 let tracks = [
-    '/sounds/trackGayageum.mp3', //0
-    '/sounds/trackGeomungo.mp3', //1
+    'sounds/trackGayageum.mp3', //0
+    'sounds/trackGeomungo.mp3', //1
     '...', //2
-    '/sounds/trackHaegeum.mp3', //3
-    '/sounds/trackJanggo.mp3', //4
-    '/sounds/trackJing.mp3', //5
-    '/sounds/trackBuk.mp3', //6
-    '/sounds/trackKkwaenggwari.mp3', //7
+    'sounds/trackHaegeum.mp3', //3
+    'sounds/trackJanggo.mp3', //4
+    'sounds/trackJing.mp3', //5
+    'sounds/trackBuk.mp3', //6
+    'sounds/trackKkwaenggwari.mp3', //7
     '...', //8
-    '/sounds/trackDaegeum.mp3', //9
+    'sounds/trackDaegeum.mp3', //9
     '...', //10
-    '/sounds/trackDanso.mp3', //11
-    '/sounds/trackHyangPiri.mp3' //12
+    'sounds/trackDanso.mp3', //11
+    'sounds/trackHyangPiri.mp3' //12
 ] 
 
 //Icons
