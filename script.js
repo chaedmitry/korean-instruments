@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",
 
 //Audio
 let track = document.getElementById('track');
-let tracks = [
+let trackList = [
     'https://chaedmitry.github.io/korean-instruments/sounds/trackGayageum.mp3', //0
     'https://chaedmitry.github.io/korean-instruments/sounds/trackGeomungo.mp3', //1
     'https://chaedmitry.github.io/korean-instruments/sounds/trackAjaeng.mp3', //2
@@ -32,14 +32,14 @@ let iconPause = document.getElementById('icon-pause');
 
 function playPause(i) {
     if (track.paused) {
-        track.src = tracks[i];
+        track.src = trackList[i];
         track.play();
     }
-    else if (tracks.indexOf(track.src) === i) {
+    else if (trackList.indexOf(track.src) === i) {
         track.pause();
     }
     else {
-        track.src = tracks[i];
+        track.src = trackList[i];
         track.play();
     }
 }

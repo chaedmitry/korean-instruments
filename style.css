@@ -173,13 +173,17 @@ header {
     font-family: inherit;
     font-size: inherit;
 }
-    .button:hover {
+    .button:hover:enabled {
         background-color: rgba(0,0,0,.04);
         border-color: #000;
     }
-    .button:active {
+    .button:active:enabled {
         background-color: rgba(0,0,0,1);
         color: white;
+    }
+    .button:disabled {
+        cursor: not-allowed;
+        color: grey;
     }
 
 /* Footer */
