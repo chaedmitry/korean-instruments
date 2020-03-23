@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", 
     function() {
-//        pauseToPlayOnEnd(document.body);
-//        pauseToPlayOnPause(document.body);
-//        playToPauseOnPlay(document.body);
+//        swapIconToPause(document.body);
     }
 );
 
@@ -44,8 +42,16 @@ function playPause(i) {
     }
 }
 
-function swapIcon(id) {
-
+function swapIconToPause(iconID) {
+    if (!track.paused) {
+        iconID.setAttribute('href','#icon-pause');
+        icons.forEach(function(icon) { // not for objects but for arrays, maybe worth creating array with icon ids
+            icon.setAttribute('href', '#icon-play');
+        });
+    }
+    else {
+        iconID.setAttribute('href','#icon-play');
+    }
 }
 
 //Reset all icons to play when some audio ended

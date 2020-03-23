@@ -46,9 +46,9 @@
                 <object type="image/svg+xml" data="img/icons/gayageum-union.svg" class='icon icon-gayageum'></object>
             </div>
             <p class=name>
-                <button class="button-play button-play-gayageum" onclick="playPause(0)">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.3512 5.58022L3.27163 0.999287C2.93894 0.784023 2.5 1.02282 2.5 1.41907V10.5809C2.5 10.9772 2.93894 11.216 3.27163 11.0007L10.3512 6.41979C10.6557 6.22276 10.6557 5.77724 10.3512 5.58022Z" stroke="black"/>
+                <button class="button-play button-play-gayageum" onclick="playPause(0);swapIconToPause(playGayageum)">
+                    <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use id='playGayageum' href='#icon-play'></use>
                     </svg>
                 </button>
                 Gayageum <span class='hangeul'>가야금</span>
@@ -62,7 +62,7 @@
                 <object type="image/svg+xml" data="img/icons/geomungo-union.svg" class='icon icon-geomungo'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-geomungo" onclick="playPause(1)">
+                <button class="button-play button-play-geomungo" onclick="playPause(1);swapIconToPause(playGeomungo)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playGeomungo' href='#icon-play'></use>
                     </svg>
@@ -77,7 +77,7 @@
                 <object type="image/svg+xml" data="img/icons/ajaeng-union.svg" class='icon icon-ajaeng'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-ajaeng" onclick="playPause(2)">
+                <button class="button-play button-play-ajaeng" onclick="playPause(2);swapIconToPause(playAjaeng)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playAjaeng' href='#icon-play'></use>
                     </svg>
@@ -92,7 +92,7 @@
                 <object type="image/svg+xml" data="img/icons/haegeum-union.svg" class='icon icon-haegeum'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-haegeum" onclick="playPause(3)">
+                <button class="button-play button-play-haegeum" onclick="playPause(3);swapIconToPause(playHaegeum)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playHaegeum' href='#icon-play'></use>
                     </svg>
@@ -107,7 +107,7 @@
                 <object type="image/svg+xml" data="img/icons/janggo-union.svg" class='icon icon-janggo'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-janggo" onclick="playPause(4)">
+                <button class="button-play button-play-janggo" onclick="playPause(4);swapIconToPause(playJanggo)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playJanggo' href='#icon-play'></use>
                     </svg>
@@ -122,7 +122,7 @@
                 <object type="image/svg+xml" data="img/icons/jing-union.svg" class='icon icon-jing'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-jing" onclick="playPause(5)">
+                <button class="button-play button-play-jing" onclick="playPause(5);swapIconToPause(playJing)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playJing' href='#icon-play'></use>
                     </svg>
@@ -137,7 +137,7 @@
                 <object type="image/svg+xml" data="img/icons/buk-union.svg" class='icon icon-buk'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-buk" onclick="playPause(6)">
+                <button class="button-play button-play-buk" onclick="playPause(6);swapIconToPause(playBuk)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playBuk' href='#icon-play'></use>
                     </svg>
@@ -152,7 +152,7 @@
                 <object type="image/svg+xml" data="img/icons/kkwaenggwari-union.svg" class='icon icon-kkwaenggwari'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-kkwaenggwari" onclick="playPause(7)">
+                <button class="button-play button-play-kkwaenggwari" onclick="playPause(7);swapIconToPause(playKkwaengwari)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playKkwaengwari' href='#icon-play'></use>
                     </svg>
@@ -167,7 +167,7 @@
                 <object type="image/svg+xml" data="img/icons/sogo-union.svg" class='icon icon-sogo'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-sogo" onclick="playPause(8)">
+                <button class="button-play button-play-sogo" onclick="playPause(8);swapIconToPause(playSogo)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playSogo' href='#icon-play'></use>
                     </svg>
@@ -182,7 +182,7 @@
                 <object type="image/svg+xml" data="img/icons/daegeum-union.svg" class='icon icon-daegeum'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-daegeum" onclick="playPause(9)">
+                <button class="button-play button-play-daegeum" onclick="playPause(9);swapIconToPause(playDaegeum)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playDaegeum' href='#icon-play'></use>
                     </svg>
@@ -197,7 +197,7 @@
                 <object type="image/svg+xml" data="img/icons/taepyongso-union.svg" class='icon icon-taepyeongso'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-taepyeongso" onclick="playPause(10)">
+                <button class="button-play button-play-taepyeongso" onclick="playPause(10);swapIconToPause(playTaepyongso)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playTaepyongso' href='#icon-play'></use>
                     </svg>
@@ -212,7 +212,7 @@
                 <object type="image/svg+xml" data="img/icons/danso-union.svg" class='icon icon-danso'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-danso" onclick="playPause(11)">
+                <button class="button-play button-play-danso" onclick="playPause(11);swapIconToPause(playDanso)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playDanso' href='#icon-play'></use>
                     </svg>
@@ -227,7 +227,7 @@
                 <object type="image/svg+xml" data="img/icons/hyangpiri-union.svg" class='icon icon-hyangpiri'></object>
             </div>
             <p class='name'>
-                <button class="button-play button-play-hyangpiri" onclick="playPause(12)">
+                <button class="button-play button-play-hyangpiri" onclick="playPause(12);swapIconToPause(playHyangPiri)">
                     <svg class='icon-play' width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <use id='playHyangPiri' href='#icon-play'></use>
                     </svg>
