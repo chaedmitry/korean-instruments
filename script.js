@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", 
     function() {
-//        swapIconToPause(document.body);
     }
 );
 
@@ -23,9 +22,21 @@ let trackList = [
 ] 
 
 //Icons
-let icons = document.getElementsByTagName('use');
-let iconPlay = document.getElementById('icon-play');
-let iconPause = document.getElementById('icon-pause');
+let iconList = [
+    'iconGayageum',
+    'iconGeomungo',
+    'iconAjaeng',
+    'iconHaegeum',
+    'iconJanggo',
+    'iconJing',
+    'iconBuk',
+    'iconKkwaenggwari',
+    'iconSogo',
+    'iconDaegeum',
+    'iconTaepyongso',
+    'iconDanso',
+    'iconHyangPiri'
+]
 
 
 function playPause(i) {
@@ -45,14 +56,20 @@ function playPause(i) {
 function swapIconToPause(iconID) {
     if (!track.paused) {
         iconID.setAttribute('href','#icon-pause');
-        icons.forEach(function(icon) { // not for objects but for arrays, maybe worth creating array with icon ids
-            icon.setAttribute('href', '#icon-play');
-        });
     }
     else {
         iconID.setAttribute('href','#icon-play');
     }
 }
+
+/*grid.addEventListener('click', 
+    function() {
+        iconList.forEach(function(icon) {
+            if (icon !== iconID) { 
+                icon.setAttribute('href', '#icon-play');
+            }
+        })
+});*/
 
 //Reset all icons to play when some audio ended
 /*
