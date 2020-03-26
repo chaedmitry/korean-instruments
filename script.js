@@ -64,7 +64,6 @@ function swapIcon(iconID) {
 // Swap all icons to "Play" when track is ended
 track.addEventListener('ended', function(){
     iconList.forEach(function(icon) {
-        console.log(icon);
         document.getElementById(icon).setAttribute('href', '#icon-play');
     })
 })
