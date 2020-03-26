@@ -1,8 +1,3 @@
-document.addEventListener("DOMContentLoaded", 
-    function() {
-    }
-);
-
 //Audio
 let track = document.getElementById('track');
 let trackList = [
@@ -53,54 +48,23 @@ function playPause(i) {
     }
 }
 
-function swapIconToPause(iconID) {
+function swapIcon(iconID) {
     if (!track.paused) {
-        iconID.setAttribute('href','#icon-pause');
+        document.getElementById(iconID).setAttribute('href','#icon-pause');
+        iconList.forEach(function(icon) {
+            if (icon !== iconID) {
+                document.getElementById(icon).setAttribute('href', '#icon-play');
+            }
+        });
     }
     else {
-        iconID.setAttribute('href','#icon-play');
+        document.getElementById(iconID).setAttribute('href','#icon-play');
     }
 }
-
-/*grid.addEventListener('click', 
-    function() {
-        iconList.forEach(function(icon) {
-            if (icon !== iconID) { 
-                icon.setAttribute('href', '#icon-play');
-            }
-        })
-});*/
-
-//Reset all icons to play when some audio ended
-/*
-function pauseToPlayOnEnd (track) {  
-    track.addEventListener("ended",
-        function () {
-            for (let i = 0; i <= icons.length; i++) {
-                icons[i].setAttribute('href',"#icon-play");
-            }
-    }, true);
-}
-
-function pauseToPlayOnPause (icons) {
-    icons.addEventListener("pause",
-        function () {
-            for (let i = 0; i <= icons.length; i++) {
-                if (icons[i].getAttribute('href') = "#icon-pause") {
-                    icons[i].setAttribute('href',"#icon-play");
-                }
-            }
-    }, true);
-}
-
-function playToPauseOnPlay (icons) {
-    icons.addEventListener("play",
-        function () {
-            for (let i = 0; i <= icons.length; i++) {
-                if (icons[i].getAttribute('href') = "#icon-play") {
-                    icons[i].setAttribute('href',"#icon-pause");
-                }
-            }
-    }, true);
-}
-*/
+// Swap all icons to "Play" when track is ended
+track.addEventListener('ended', function(){
+    iconList.forEach(function(icon) {
+        console.log(icon);
+        document.getElementById(icon).setAttribute('href', '#icon-play');
+    })
+})
