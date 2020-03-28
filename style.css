@@ -101,12 +101,15 @@ header {
     max-width: 100%;
     margin-bottom: 3rem;
     flex: 0 0 20%;
+    cursor: pointer;
 }
 
 .illustration {
     height: 224px;
     display: flex;
     position: relative;
+    pointer-events: none;
+    user-select: none;
 }
 
 .icon {
@@ -131,7 +134,7 @@ header {
     border: none;
     cursor: pointer;
 }
-    .button-play:hover svg use, .button-play:hover svg path, .button-play:hover, .icon-play:hover { /* remove path selector when use "use" in all instruments*/
+    .instrument:hover svg use, .button-play:hover svg use, .button-play:hover, .icon-play:hover {
         fill: #000;
     }
 
