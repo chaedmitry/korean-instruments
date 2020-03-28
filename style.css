@@ -102,6 +102,7 @@ header {
     margin-bottom: 3rem;
     flex: 0 0 20%;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .illustration {
@@ -110,7 +111,6 @@ header {
     position: relative;
     pointer-events: none;
     user-select: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .icon {
