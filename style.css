@@ -194,6 +194,10 @@ footer {
     margin: 4rem 2.5rem 2.5rem 2.5rem;
 }
 
+.author {
+    margin-top: 2rem;
+}
+
 @media (max-width: 1054px) { /* 4 instruments in a row, header in 1 column*/
     .nav-links {
         margin: 1rem 2rem 1rem 2rem;
