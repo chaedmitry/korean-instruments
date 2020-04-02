@@ -152,7 +152,7 @@ button:focus {outline:0;}
 /* Quiz section */
 
 .quiz {
-    margin: 5rem auto;
+    margin: 5rem 1.5rem;
     display: block;
     text-align: center;
 }
@@ -167,7 +167,7 @@ button:focus {outline:0;}
     margin-bottom: 1.5rem;
 }
 
-.button-link {
+.button-link, .choice-container {
     display: inline-block;
     color: #000;
     background: none;
@@ -179,14 +179,30 @@ button:focus {outline:0;}
     font-size: inherit;
     text-decoration: none;
 }
-    .button-link:hover {
+    .button-link:hover, .choice-container:hover {
         background-color: rgba(0,0,0,.04);
         border-color: #000;
     }
-    .button-link:active {
+    .button-link:active, .choice-container:active {
         background-color: rgba(0,0,0,1);
         color: white;
     }
+
+/* Quiz app */
+
+#quiz-container {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+#question {
+    margin-bottom: 0.5rem;
+}
+
+.choice-container {
+    margin: 0.5rem;
+}
 
 /* Footer */
 

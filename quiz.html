@@ -21,28 +21,24 @@
         </ul>
     </nav>
     <section id='quiz-container'>
-        <h1>Question 1 of 5</h1>
+        <svg id='icon-play' width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M56.0179 39.5802L29.1049 22.1659C28.7723 21.9506 28.3333 22.1894 28.3333 22.5857V57.4142C28.3333 57.8105 28.7723 58.0493 29.1049 57.834L56.0179 40.4197C56.3224 40.2227 56.3224 39.7772 56.0179 39.5802Z" stroke="black" stroke-width="2"/>
+        </svg>
+        <h2 id='question'>#<span id='counter'>1</span>/5: what instrument is playing?</h2>
+        <div class='choice-container'>
+            <p class='choice-text' data-number='1'>Choice 1</p>
+        </div>
+        <div class='choice-container'>
+            <p class='choice-text' data-number='2'>Choice 2</p>
+        </div>
+        <div class='choice-container'>
+            <p class='choice-text' data-number='3'>Choice 3</p>
+        </div>
+        <div class='choice-container'>
+            <p class='choice-text' data-number='4'>Choice 4</p>
+        </div>
     </section>
-
-    <footer>
-            <section class='learn-more'>
-                <h3>Learn more</h3>
-                <ul class='references'>
-                    <li><a class='normal-link' href='https://en.wikipedia.org/wiki/Traditional_Korean_musical_instruments' target='_blank'>Wikipedia</a></li>
-                    <li><a class='normal-link' href='https://artsandculture.google.com/exhibit/TQLCWFVCGDVvKQ' target='_blank'>Google Arts and Culture</a></li>
-                    <li><a class='normal-link' href='https://omeka-s.grinnell.edu/s/MusicalInstruments/musical-instrument-search?q=korean&limit%5Bdcterms_coverage_s%5D%5B0%5D=South%20Korea' target='_blank'>Grinnel College collection</a>.</li>
-                </ul>
-            </section>
-    
-            <section class='credits'>
-                <h3>Credits</h3>
-                <p>Sounds from
-                    <a class='normal-link' href='http://www.gugak.go.kr/' target="_blank">National Gugak Center</a>, <a class='normal-link' href='https://freesound.org/people/ultradust/sounds/167382/' target="_blank">Andi Roselund</a>.
-                    <br>
-                    Designed by <a class='normal-link' href='https://chae.design' target='_blank'>Dmitry Chae</a>
-                </p>
-            </section>
-        </footer>
+    <script type="text/javascript" src="quiz.js"></script>
 </body>
 </html>
 
