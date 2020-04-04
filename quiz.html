@@ -15,6 +15,17 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <svg display="none" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <g id='icon-play'>
+                <path d="M56.0179 39.5802L29.1049 22.1659C28.7723 21.9506 28.3333 22.1894 28.3333 22.5857V57.4142C28.3333 57.8105 28.7723 58.0493 29.1049 57.834L56.0179 40.4197C56.3224 40.2227 56.3224 39.7772 56.0179 39.5802Z" stroke="black" stroke-width="2"/>
+            </g>
+            <g id='icon-pause'>
+                <path d="M25 25.5C25 25.2239 25.2239 25 25.5 25H34.5C34.7761 25 35 25.2239 35 25.5V54.5C35 54.7761 34.7761 55 34.5 55H25.5C25.2239 55 25 54.7761 25 54.5V25.5Z" stroke="black" stroke-width="2"/>
+                <path d="M45 25.5C45 25.2239 45.2239 25 45.5 25H54.5C54.7761 25 55 25.2239 55 25.5V54.5C55 54.7761 54.7761 55 54.5 55H45.5C45.2239 55 45 54.7761 45 54.5V25.5Z" stroke="black" stroke-width="2"/>
+            </g>
+        </defs>
+    </svg>
     <nav class='menu'>
         <ul class='nav-links'>
             <li class='nav-item'><a class='normal-link' href='/korean-instruments/'>Instruments</a></li>
@@ -23,10 +34,12 @@
     </nav>
     <audio id='track'></audio>
     <section id='quiz-container'>
-        <svg id='icon-play' width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M56.0179 39.5802L29.1049 22.1659C28.7723 21.9506 28.3333 22.1894 28.3333 22.5857V57.4142C28.3333 57.8105 28.7723 58.0493 29.1049 57.834L56.0179 40.4197C56.3224 40.2227 56.3224 39.7772 56.0179 39.5802Z" stroke="black" stroke-width="2"/>
-        </svg>
-        <h2 id='question'>#<span id='counter'>1</span>/5: what instrument is playing?</h2>
+        <button class="button-play" onclick="questionPlayPause();questionSwapIcon()">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use id='icon-play-pause' href='#icon-play'></use>
+            </svg>
+        </button>
+        <h2 id='question'>#<span id='question-number'>1</span>/5: what instrument is playing?</h2>
         <div class='choice-container'>
             <p class='choice-text' data-number='1'>Choice 1</p>
         </div>
@@ -41,6 +54,7 @@
         </div>
     </section>
     <script type="text/javascript" src="quiz.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
 

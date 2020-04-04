@@ -1,12 +1,15 @@
-const question = document.getElementById('question');
+// Answer options
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 
-let track = document.getElementById('track');
+// Counter in heading (#1/5)
+let questionNumber = document.getElementById('question-number');
+
 let currentQuestion = {};
 let acceptingAnswers = false;
 let questionCounter = 0;
 let availableQuestions = [];
 
+// All questions
 let questions = [
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackGayageum.mp3',
@@ -89,13 +92,41 @@ choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return;
         
+        questionNumber.innerHTML++;
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        
+
+        // Set icon to "Play"
+        document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
+
         getNewQuestion();
-        console.log(track.src);
+        console.log(choices);
     });
 });
+
+questionPlayPause = () => {
+    if (track.paused) {
+        track.play();
+    }
+    else {
+        track.pause();
+    }
+};
+
+questionSwapIcon = () => {
+    if (!track.paused) {
+        document.getElementById('icon-play-pause').setAttribute('href','#icon-pause');
+    }
+    else {
+        document.getElementById('icon-play-pause').setAttribute('href','#icon-play');
+    }
+};
+
+// Swap icon to "Play" when track is ended
+track.addEventListener('ended', function(){
+    document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
+});
+
 
 startGame();

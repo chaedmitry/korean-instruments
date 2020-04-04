@@ -34,7 +34,7 @@ let iconList = [
 ]
 
 
-function playPause(i) {
+playPause = (i) => {
     if (track.paused) {
         track.src = trackList[i];
         track.play();
@@ -48,7 +48,7 @@ function playPause(i) {
     }
 }
 
-function swapIcon(iconID) {
+swapIcon = (iconID) => {
     if (!track.paused) {
         document.getElementById(iconID).setAttribute('href','#icon-pause');
         iconList.forEach(function(icon) {
