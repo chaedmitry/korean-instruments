@@ -128,8 +128,6 @@ header {
 button:focus {outline:0;}
 
 .button-play {
-    width: 1.5rem;
-    height: 1.5rem;
     display: inline-block;
     background: none;
     border: none;
