@@ -97,8 +97,6 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-        // Set icon to "Play"
-        document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
 
         // Correct or incorrect answer
         let classToApply = '';
@@ -114,6 +112,8 @@ choices.forEach(choice => {
         // Timeout before new question appears
         setTimeout(() => {
             getNewQuestion();
+            // Set icon to "Play"
+            document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
         }, 1500);
     });
 });
