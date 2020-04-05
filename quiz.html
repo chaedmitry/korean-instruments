@@ -35,7 +35,7 @@
     <audio id='track'></audio>
     <section id='quiz-container'>
         
-        <button class="button-play" id="button-play" onclick="questionPlayPause();questionSwapIcon()">
+        <button class="button-play no-select" id="button-play" onclick="questionPlayPause();questionSwapIcon()">
             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use id='icon-play-pause' href='#icon-play'></use>
             </svg>
@@ -43,16 +43,16 @@
         
         <h2 id='question'><span id='question-counter-text'>1/5</span>: what instrument is&nbsp;playing?</h2>
 
-        <div class='choice-container'>
+        <div class='choice-container no-select'>
             <p class='choice-text' data-number='1'>Choice 1</p>
         </div>
-        <div class='choice-container'>
+        <div class='choice-container no-select'>
             <p class='choice-text' data-number='2'>Choice 2</p>
         </div>
-        <div class='choice-container'>
+        <div class='choice-container no-select'>
             <p class='choice-text' data-number='3'>Choice 3</p>
         </div>
-        <div class='choice-container'>
+        <div class='choice-container no-select'>
             <p class='choice-text' data-number='4'>Choice 4</p>
         </div>
 
@@ -64,7 +64,7 @@
             <p class='progress-item' id='progress-icon-5'>○</p>
         </div>
 
-        <button id='restart' class='button-link' style='display:none' onclick='location.reload()'><p>Start over</p></button>
+        <button id='restart' class='button-link no-select' style='display:none' onclick='location.reload()'><p>Start over</p></button>
     </section>
     <footer>
         <section class='learn-more'>
