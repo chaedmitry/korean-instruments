@@ -200,7 +200,7 @@ incrementScore = () => {
 
 endGame = () => {
     track.pause();
-    question.innerHTML = "You've got "+score+" out of"+"&nbsp;"+MAX_QUESTIONS+"!";
+    question.innerHTML = "You've got "+score+"&nbsp;"+"out"+"&nbsp;"+"of"+"&nbsp;"+MAX_QUESTIONS+"!";
     buttonPlay.style.visibility = 'hidden';
     choiceContainers.forEach(container => {
         container.style.display = 'none';
