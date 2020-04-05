@@ -207,6 +207,16 @@ button:focus {outline:0;}
     margin: 0.5rem 0.25rem;
 }
 
+#progress {
+    margin: 3rem;
+}
+
+.progress-item {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+}
+
 /* Footer */
 
 footer {

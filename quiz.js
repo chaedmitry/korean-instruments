@@ -57,7 +57,7 @@ let questions = [
     choice2: 'Sogo',
     choice3: 'Gayageum',
     choice4: 'Hyang Piri',
-    answer: 2
+    answer: 1
 },]
 
 const MAX_QUESTIONS = 5;
@@ -98,15 +98,20 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
 
+        // Current question icon in progress bar
+        let currentQuestionIcon = document.getElementById('progress-icon-'+questionCounter);
+
         // Correct or incorrect answer
         let classToApply = '';
         if (selectedAnswer == currentQuestion.answer) {
             classToApply = 'correct';
             selectedChoice.innerHTML += ' 👏🏼'
+            currentQuestionIcon.innerText = '👏🏼'
         }
         else {
             classToApply = 'incorrect';
             selectedChoice.innerHTML += ' 💩'
+            currentQuestionIcon.innerText = '💩'
         }
 
         // Timeout before new question appears
