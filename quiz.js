@@ -96,15 +96,14 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
-
         // Set icon to "Play"
         document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
 
         getNewQuestion();
-        console.log(choices);
     });
 });
 
+// Simpler function to play and pause
 questionPlayPause = () => {
     if (track.paused) {
         track.play();
@@ -114,6 +113,7 @@ questionPlayPause = () => {
     }
 };
 
+// Simpler function to swap icon to pause and back
 questionSwapIcon = () => {
     if (!track.paused) {
         document.getElementById('icon-play-pause').setAttribute('href','#icon-pause');
@@ -127,6 +127,5 @@ questionSwapIcon = () => {
 track.addEventListener('ended', function(){
     document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
 });
-
 
 startGame();

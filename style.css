@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Proza+Libre:400,500&display=swap');
 
+/* Side margins
+1440-1055: 2.5rem
+1054-463: 2rem
+462-: 1.5rem
+*/
+
 /* General styles */
 
 html {
@@ -54,7 +60,7 @@ h3 {
     font-weight: 500;
     font-size: inherit;
     margin-top: 1.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .normal-link {
@@ -81,7 +87,7 @@ header {
 }
 
 .description {
-    margin: .5rem 0 0 0;
+    margin: 0.5rem 0 0 0;
     flex: 1 1 40%;
 }
 
@@ -173,8 +179,6 @@ button:focus {outline:0;}
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
     text-decoration: none;
 }
     .button-link:hover, .choice-container:hover {
@@ -189,7 +193,7 @@ button:focus {outline:0;}
 /* Quiz app */
 
 #quiz-container {
-    margin: 0 auto;
+    margin: 0 2.5rem;
     display: block;
     text-align: center;
     padding: 0;
@@ -288,5 +292,8 @@ footer {
     .instrument {
         margin-bottom: 2rem;
         flex: 1 0 100%;
+    }
+    .choice-container {
+        display: block;
     }
 }
