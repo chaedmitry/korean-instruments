@@ -65,6 +65,62 @@ let questions = [
     answer: 2
 },
 {
+    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackSogo.mp3',
+    choice1: 'Janggo',
+    choice2: 'Daegeum',
+    choice3: 'Buk',
+    choice4: 'Sogo',
+    answer: 4
+},
+{
+    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackAjaeng.mp3',
+    choice1: 'Hyang Piri',
+    choice2: 'Ajaeng',
+    choice3: 'Haegeum',
+    choice4: 'Gayageum',
+    answer: 2
+},
+{
+    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackGeomungo.mp3',
+    choice1: 'Haegeum',
+    choice2: 'Danso',
+    choice3: 'Geomungo',
+    choice4: 'Janggo',
+    answer: 3
+},
+{
+    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackBuk.mp3',
+    choice1: 'Buk',
+    choice2: 'Kkwaenggwari',
+    choice3: 'Jing',
+    choice4: 'Janggo',
+    answer: 1
+},
+{
+    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackDaegeum.mp3',
+    choice1: 'Danso',
+    choice2: 'Taepyeongso',
+    choice3: 'Daegeum',
+    choice4: 'Gayageum',
+    answer: 3
+},
+{
+    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackTaepyeongso.mp3',
+    choice1: 'Haegeum',
+    choice2: 'Taepyeongso',
+    choice3: 'Ajaeng',
+    choice4: 'Danso',
+    answer: 2
+},
+{
+    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackDanso.mp3',
+    choice1: 'Danso',
+    choice2: 'Hyang Piri',
+    choice3: 'Geomungo',
+    choice4: 'Daegeum',
+    answer: 4
+},
+{
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackJing.mp3',
     choice1: 'Jing',
     choice2: 'Sogo',
@@ -133,7 +189,7 @@ choices.forEach(choice => {
             getNewQuestion();
             // Set icon to "Play"
             document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
-        }, 1200);
+        }, 1000);
         console.log(score);
     });
 });
