@@ -139,10 +139,12 @@ button:focus {outline:0;}
     border: none;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
+} 
+@media (hover:hover) {
     .instrument:hover svg use, .button-play:hover svg use, .button-play:hover, .icon-play:hover {
         fill: #000;
     }
+}
 
 .name {
     text-align: center;
@@ -183,6 +185,7 @@ button:focus {outline:0;}
     cursor: pointer;
     text-decoration: none;
 }
+@media (hover:hover) {
     .button-link:hover, .choice-container:hover {
         background-color: rgba(0,0,0,.04);
         border-color: #000;
@@ -191,6 +194,7 @@ button:focus {outline:0;}
         background-color: rgba(0,0,0,1);
         color: white;
     }
+}
 
 /* Quiz app */
 
