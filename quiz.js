@@ -2,7 +2,7 @@
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 
 // Counter in heading (#1/5)
-let questionNumber = document.getElementById('question-number');
+let questionCounterText = document.getElementById('question-counter-text');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -75,6 +75,8 @@ getNewQuestion = () => {
     };
 
     questionCounter++;
+    questionCounterText.innerText = questionCounter + '/' + MAX_QUESTIONS;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     track.src = currentQuestion.question;
@@ -92,14 +94,27 @@ choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return;
         
-        questionNumber.innerHTML++;
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
         // Set icon to "Play"
         document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
 
-        getNewQuestion();
+        // Correct or incorrect answer
+        let classToApply = '';
+        if (selectedAnswer == currentQuestion.answer) {
+            classToApply = 'correct';
+            selectedChoice.innerHTML += ' 👏🏼'
+        }
+        else {
+            classToApply = 'incorrect';
+            selectedChoice.innerHTML += ' 💩'
+        }
+
+        // Timeout before new question appears
+        setTimeout(() => {
+            getNewQuestion();
+        }, 1500);
     });
 });
 

@@ -200,11 +200,11 @@ button:focus {outline:0;}
 }
 
 #question {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .choice-container {
-    margin: 0.25rem;
+    margin: 0.5rem 0.25rem;
 }
 
 /* Footer */
@@ -292,6 +292,9 @@ footer {
     .instrument {
         margin-bottom: 2rem;
         flex: 1 0 100%;
+    }
+    #quiz-container {
+        margin: 0 1.5rem;
     }
     .choice-container {
         display: block;
