@@ -200,10 +200,10 @@ button:focus {outline:0;}
         background-color: rgba(0,0,0,.04);
         border-color: #000;
     }
-    .button-link:active, .choice-container:active {
-        background-color: rgba(0,0,0,1);
-        color: white;
-    }
+}
+.button-link:active, .choice-container:active {
+    background-color: rgba(0,0,0,1);
+    color: white;
 }
 
 /* Quiz app */
