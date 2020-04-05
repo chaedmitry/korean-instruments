@@ -35,7 +35,7 @@
     <audio id='track'></audio>
     <section id='quiz-container'>
         
-        <button class="button-play" onclick="questionPlayPause();questionSwapIcon()">
+        <button class="button-play" id="button-play" onclick="questionPlayPause();questionSwapIcon()">
             <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use id='icon-play-pause' href='#icon-play'></use>
             </svg>
@@ -63,7 +63,28 @@
             <p class='progress-item' id='progress-icon-4'>●</p>
             <p class='progress-item' id='progress-icon-5'>●</p>
         </div>
+
+        <button id='restart' class='button-link' style='display:none' onclick='location.reload()'><p>Start over</p></button>
     </section>
+    <footer>
+        <section class='learn-more'>
+            <h3>Learn more</h3>
+            <ul class='references'>
+                <li><a class='normal-link' href='https://en.wikipedia.org/wiki/Traditional_Korean_musical_instruments' target='_blank'>Wikipedia</a></li>
+                <li><a class='normal-link' href='https://artsandculture.google.com/exhibit/TQLCWFVCGDVvKQ' target='_blank'>Google Arts and Culture</a></li>
+                <li><a class='normal-link' href='https://omeka-s.grinnell.edu/s/MusicalInstruments/musical-instrument-search?q=korean&limit%5Bdcterms_coverage_s%5D%5B0%5D=South%20Korea' target='_blank'>Grinnel College collection</a>.</li>
+            </ul>
+        </section>
+
+        <section class='credits'>
+            <h3>Sounds from</h3>
+            <p><a class='normal-link' href='http://www.gugak.go.kr/' target="_blank">National Gugak Center</a>
+            <br>
+            <p><a class='normal-link' href='https://freesound.org/people/ultradust/sounds/167382/' target="_blank">Andi Roselund</a>.</p>
+            </p>
+        </section>
+        <p class='author'>— <a class='normal-link' href='https://chae.design' target='_blank'>dmitrychae</a></p>
+    </footer>
     <script type="text/javascript" src="quiz.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>

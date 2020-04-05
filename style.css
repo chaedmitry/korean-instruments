@@ -172,6 +172,8 @@ button:focus {outline:0;}
 }
 
 .button-link, .choice-container {
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 1rem;
     display: inline-block;
     color: #000;
     background: none;
@@ -208,7 +210,7 @@ button:focus {outline:0;}
 }
 
 #progress {
-    margin: 3rem;
+    margin: 2rem;
 }
 
 .progress-item {

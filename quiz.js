@@ -1,13 +1,26 @@
-// Answer options
-const choices = Array.from(document.getElementsByClassName('choice-text'));
+// Question string
+let question = document.getElementById('question');
 
 // Counter in heading (#1/5)
 let questionCounterText = document.getElementById('question-counter-text');
+
+// Button "Play"
+let buttonPlay = document.getElementById('button-play');
+
+// Answer options containers
+let choiceContainers = Array.from(document.getElementsByClassName('choice-container'));
+
+// Answer options text
+const choices = Array.from(document.getElementsByClassName('choice-text'));
+
+// Button "Start over"
+let startOverButton = document.getElementById('restart');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
 let questionCounter = 0;
 let availableQuestions = [];
+let score = 0;
 
 // All questions
 let questions = [
@@ -71,11 +84,11 @@ startGame = () => {
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     //game ends
-    return window.location.assign('/result.html');
+    return endGame();
     };
 
     questionCounter++;
-    questionCounterText.innerText = questionCounter + '/' + MAX_QUESTIONS;
+    questionCounterText.innerText = '#'+questionCounter + '/' + MAX_QUESTIONS;
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -102,14 +115,15 @@ choices.forEach(choice => {
         let currentQuestionIcon = document.getElementById('progress-icon-'+questionCounter);
 
         // Correct or incorrect answer
-        let classToApply = '';
+        let validation = '';
         if (selectedAnswer == currentQuestion.answer) {
-            classToApply = 'correct';
+            validation = 'correct';
             selectedChoice.innerHTML += ' 👏🏼'
             currentQuestionIcon.innerText = '👏🏼'
+            incrementScore();
         }
         else {
-            classToApply = 'incorrect';
+            validation = 'incorrect';
             selectedChoice.innerHTML += ' 💩'
             currentQuestionIcon.innerText = '💩'
         }
@@ -119,9 +133,23 @@ choices.forEach(choice => {
             getNewQuestion();
             // Set icon to "Play"
             document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
-        }, 1500);
+        }, 1200);
+        console.log(score);
     });
 });
+
+incrementScore = () => {
+    score++;
+}
+
+endGame = () => {
+    question.innerHTML = "You've got "+score+" out of "+MAX_QUESTIONS+"!";
+    buttonPlay.style.visibility = 'hidden';
+    choiceContainers.forEach(container => {
+        container.style.display = 'none';
+    });
+    startOverButton.style.display = '';
+}
 
 // Simpler function to play and pause
 questionPlayPause = () => {
