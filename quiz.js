@@ -146,16 +146,22 @@ getNewQuestion = () => {
     questionCounter++;
     questionCounterText.innerText = '#'+questionCounter + '/' + MAX_QUESTIONS;
 
+    // Randomly choose a question
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
-    track.src = currentQuestion.question;
 
+    // Set a track depending on question
+    track.src = currentQuestion.question;
+    
+    // Fetch choices from question object
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     });
 
+    // Remove this question from available questions
     availableQuestions.splice(questionIndex, 1);
+
     acceptingAnswers = true;
 };
 

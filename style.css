@@ -236,11 +236,24 @@ button:focus {outline:0;}
 /* Footer */
 
 footer {
-    margin: 4rem 2.5rem 2.5rem 2.5rem;
+    margin: 8rem 2.5rem 2.5rem 2.5rem;
+    display: flex;
+    border-top: 1px solid #cacaca;
+    justify-content: space-between;
+}
+
+.learn-more {
+    flex: 0 0 20%;
+}
+
+.credits {
+    flex: 0 0 20%;
 }
 
 .author {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    flex: 0 0 60%;
+    text-align: right;
 }
 
 @media (max-width: 1054px) { /* 4 instruments in a row, header in 1 column*/
@@ -276,9 +289,27 @@ footer {
     footer {
         margin: 4rem 2rem 2rem 2rem;
     }
+    .learn-more {
+        flex: 0 0 25%;
+    }
+    .credits {
+        flex: 0 0 25%;
+    }
+    .author {
+        flex: 0 0 50%;
+    }
 }
 @media (max-width: 920px) { /* 3 instruments in a row */
     .instrument {
+        flex: 0 0 33%;
+    }
+    .learn-more {
+        flex: 0 0 33%;
+    }
+    .credits {
+        flex: 0 0 33%;
+    }
+    .author {
         flex: 0 0 33%;
     }
 }
@@ -293,6 +324,12 @@ footer {
     h2 {
         font-size: 2rem;
         line-height: 2.5rem;
+    }
+    footer {
+        display: block;
+    }
+    .author {
+        text-align: left;
     }
 }
 @media (max-width: 462px) { /* 1 instrument in a row */
