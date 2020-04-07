@@ -244,7 +244,7 @@ button:focus {outline:0;}
 /* Footer */
 
 footer {
-    margin: auto 2.5rem 2.5rem 2.5rem;
+    margin: auto 2.5rem 1.5rem 2.5rem;
     display: flex;
     justify-content: space-between;
     flex-shrink: 0;
@@ -296,7 +296,7 @@ footer {
         flex: 0 0 25%;
     }
     footer {
-        margin: auto 2rem 2rem 2rem;
+        margin: auto 2rem 1rem 2rem;
     }
     .learn-more {
         flex: 0 0 25%;
@@ -359,7 +359,7 @@ footer {
         width: 100%;
     }
     footer {
-        margin: auto 1.5rem 1.5rem 1.5rem;
+        margin: auto 1.5rem 1rem 1.5rem;
     }
     .instrument {
         margin-bottom: 2rem;
