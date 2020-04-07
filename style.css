@@ -217,7 +217,7 @@ button:focus {outline:0;}
 /* Quiz app */
 
 #quiz-container {
-    margin: 0 2.5rem;
+    margin: auto 2.5rem;
     display: block;
     text-align: center;
     padding: 0;
@@ -366,7 +366,7 @@ footer {
         flex: 1 0 100%;
     }
     #quiz-container {
-        margin: 0 1.5rem;
+        margin: auto 1.5rem;
     }
     .choice-container {
         display: block;
