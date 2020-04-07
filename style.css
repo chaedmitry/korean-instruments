@@ -16,11 +16,19 @@ html {
     line-height: 1.5rem;
     background: #fafafa;
     margin: 0;
+    height: 100%;
 }
 
 body {
     max-width: 1440px;
     margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 p {
@@ -168,7 +176,7 @@ button:focus {outline:0;}
 /* Quiz section */
 
 .quiz {
-    margin: 5rem 1.5rem;
+    margin: 8rem 1.5rem;
     display: block;
     text-align: center;
 }
@@ -236,10 +244,10 @@ button:focus {outline:0;}
 /* Footer */
 
 footer {
-    margin: 8rem 2.5rem 2.5rem 2.5rem;
+    margin: auto 2.5rem 2.5rem 2.5rem;
     display: flex;
-    border-top: 1px solid #cacaca;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 
 .learn-more {
@@ -254,6 +262,7 @@ footer {
     margin-top: 1.5rem;
     flex: 0 0 60%;
     text-align: right;
+    align-self: flex-end;
 }
 
 @media (max-width: 1054px) { /* 4 instruments in a row, header in 1 column*/
@@ -287,7 +296,7 @@ footer {
         flex: 0 0 25%;
     }
     footer {
-        margin: 4rem 2rem 2rem 2rem;
+        margin: auto 2rem 2rem 2rem;
     }
     .learn-more {
         flex: 0 0 25%;
@@ -322,8 +331,8 @@ footer {
         line-height: 3rem;
     }
     h2 {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
     }
     footer {
         display: block;
@@ -350,7 +359,7 @@ footer {
         width: 100%;
     }
     footer {
-        margin: 4rem 1.5rem 1.5rem 1.5rem;
+        margin: auto 1.5rem 1.5rem 1.5rem;
     }
     .instrument {
         margin-bottom: 2rem;
