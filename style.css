@@ -348,7 +348,7 @@ footer {
     header {
         margin: 0 1.5rem 2rem 1.5rem;
     }
-    h1 {
+    h1, h2 {
         font-size: 2rem;
         line-height: 2.5rem;
     }

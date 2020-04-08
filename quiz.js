@@ -196,7 +196,6 @@ choices.forEach(choice => {
             // Set icon to "Play"
             document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
         }, 1000);
-        console.log(score);
     });
 });
 
