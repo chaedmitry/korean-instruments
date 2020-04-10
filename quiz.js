@@ -27,7 +27,7 @@ let questions = [
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackGayageum.mp3',
     choice1: 'Gayageum',
-    choice2: 'Ajaeng',
+    choice2: 'Hyang Bipa',
     choice3: 'Haegeum',
     choice4: 'Jing',
     answer: 1
@@ -36,7 +36,7 @@ let questions = [
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackJanggo.mp3',
     choice1: 'Jing',
     choice2: 'Buk',
-    choice3: 'Kkwaenggwari',
+    choice3: 'Hyang Bipa',
     choice4: 'Janggo',
     answer: 4
 },
@@ -108,7 +108,7 @@ let questions = [
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackTaepyeongso.mp3',
     choice1: 'Haegeum',
     choice2: 'Taepyeongso',
-    choice3: 'Ajaeng',
+    choice3: 'Hyang Bipa',
     choice4: 'Danso',
     answer: 2
 },
@@ -127,7 +127,16 @@ let questions = [
     choice3: 'Gayageum',
     choice4: 'Hyang Piri',
     answer: 1
-},]
+},
+{
+    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangBipa.mp3',
+    choice1: 'Geomungo',
+    choice2: 'Hyang Bipa',
+    choice3: 'Gayageum',
+    choice4: 'Kkwaenggwari',
+    answer: 2
+},
+]
 
 const MAX_QUESTIONS = 5;
 

@@ -5,15 +5,16 @@ let trackList = [
     'https://chaedmitry.github.io/korean-instruments/sounds/trackGeomungo.mp3', //1
     'https://chaedmitry.github.io/korean-instruments/sounds/trackAjaeng.mp3', //2
     'https://chaedmitry.github.io/korean-instruments/sounds/trackHaegeum.mp3', //3
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackJanggo.mp3', //4
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackJing.mp3', //5
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackBuk.mp3', //6
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackKkwaenggwari.mp3', //7
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackSogo.mp3', //8
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackDaegeum.mp3', //9
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackTaepyeongso.mp3', //10
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackDanso.mp3', //11
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangPiri.mp3' //12
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangBipa.mp3', //4
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackJanggo.mp3', //5
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackJing.mp3', //6
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackBuk.mp3', //7
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackKkwaenggwari.mp3', //8
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackSogo.mp3', //9
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackDaegeum.mp3', //10
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackTaepyeongso.mp3', //11
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackDanso.mp3', //12
+    'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangPiri.mp3' //13
 ] 
 
 //Icons
@@ -22,6 +23,7 @@ let iconList = [
     'iconGeomungo',
     'iconAjaeng',
     'iconHaegeum',
+    'iconBipa',
     'iconJanggo',
     'iconJing',
     'iconBuk',
