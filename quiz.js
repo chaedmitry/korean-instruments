@@ -118,7 +118,7 @@ let questions = [
     choice2: 'Hyang Piri',
     choice3: 'Geomungo',
     choice4: 'Daegeum',
-    answer: 4
+    answer: 1
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackJing.mp3',
