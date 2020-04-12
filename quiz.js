@@ -13,6 +13,9 @@ let choiceContainers = Array.from(document.getElementsByClassName('choice-contai
 // Answer options text
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 
+// Answer options pictures
+const choicePics = Array.from(document.getElementsByClassName('choice-pic'));
+
 // Button "Start over"
 let startOverButton = document.getElementById('restart');
 
@@ -26,115 +29,229 @@ let score = 0;
 let questions = [
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackGayageum.mp3',
+    
     choice1: 'Gayageum',
+    choicepic1: 'img/instruments-small/gayageum-small.svg',
+
     choice2: 'Hyang Bipa',
+    choicepic2: 'img/instruments-small/bipa-small.svg',
+
     choice3: 'Haegeum',
+    choicepic3: 'img/instruments-small/haegeum-small.svg',
+
     choice4: 'Jing',
+    choicepic4: 'img/instruments-small/jing-small.svg',
+
     answer: 1
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackJanggo.mp3',
     choice1: 'Jing',
+    choicepic1: 'img/instruments-small/jing-small.svg',
+
     choice2: 'Buk',
+    choicepic2: 'img/instruments-small/buk-small.svg',
+
     choice3: 'Hyang Bipa',
+    choicepic3: 'img/instruments-small/bipa-small.svg',
+
     choice4: 'Janggo',
+    choicepic4: 'img/instruments-small/janggo-small.svg',
+
     answer: 4
 },
+
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackHaegeum.mp3',
     choice1: 'Ajaeng',
+    choicepic1: 'img/instruments-small/ajaeng-small.svg',
+
     choice2: 'Sogo',
+    choicepic2: 'img/instruments-small/placeholder.svg',
+
     choice3: 'Haegeum',
+    choicepic3: 'img/instruments-small/haegeum-small.svg',
+
     choice4: 'Geomungo',
+    choicepic4: 'img/instruments-small/geomungo-small.svg',
+
     answer: 3
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangPiri.mp3',
     choice1: 'Taepyeongso',
+    choicepic1: 'img/instruments-small/placeholder.svg',
+
     choice2: 'Daegeum',
+    choicepic2: 'img/instruments-small/placeholder.svg',
+
     choice3: 'Buk',
+    choicepic3: 'img/instruments-small/buk-small.svg',
+
     choice4: 'Hyang Piri',
+    choicepic4: 'img/instruments-small/placeholder.svg',
+
     answer: 4
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackKkwaenggwari.mp3',
     choice1: 'Danso',
+    choicepic1: 'img/instruments-small/placeholder.svg',
+
     choice2: 'Kkwaenggwari',
+    choicepic2: 'img/instruments-small/kkwaenggwari-small.svg',
+
     choice3: 'Buk',
+    choicepic3: 'img/instruments-small/buk-small.svg',
+
     choice4: 'Janggo',
+    choicepic4: 'img/instruments-small/janggo-small.svg',
+
     answer: 2
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackSogo.mp3',
     choice1: 'Janggo',
+    choicepic1: 'img/instruments-small/janggo-small.svg',
+
     choice2: 'Daegeum',
+    choicepic2: 'img/instruments-small/placeholder.svg',
+
     choice3: 'Buk',
+    choicepic3: 'img/instruments-small/buk-small.svg',
+
     choice4: 'Sogo',
+    choicepic4: 'img/instruments-small/placeholder.svg',
+
     answer: 4
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackAjaeng.mp3',
     choice1: 'Hyang Piri',
+    choicepic1: 'img/instruments-small/placeholder.svg',
+
     choice2: 'Ajaeng',
+    choicepic2: 'img/instruments-small/ajaeng-small.svg',
+
     choice3: 'Haegeum',
+    choicepic3: 'img/instruments-small/haegeum-small.svg',
+    
     choice4: 'Gayageum',
+    choicepic4: 'img/instruments-small/gayageum-small.svg',
+    
     answer: 2
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackGeomungo.mp3',
     choice1: 'Haegeum',
+    choicepic1: 'img/instruments-small/haegeum-small.svg',
+
     choice2: 'Danso',
+    choicepic2: 'img/instruments-small/placeholder.svg',
+
     choice3: 'Geomungo',
+    choicepic3: 'img/instruments-small/geomungo-small.svg',
+    
     choice4: 'Janggo',
+    choicepic4: 'img/instruments-small/janggo-small.svg',
+    
     answer: 3
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackBuk.mp3',
     choice1: 'Buk',
+    choicepic1: 'img/instruments-small/buk-small.svg',
+    
     choice2: 'Kkwaenggwari',
+    choicepic2: 'img/instruments-small/kkwaenggwari-small.svg',
+
     choice3: 'Jing',
+    choicepic3: 'img/instruments-small/jing-small.svg',
+
     choice4: 'Janggo',
+    choicepic4: 'img/instruments-small/janggo-small.svg',
+
     answer: 1
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackDaegeum.mp3',
     choice1: 'Danso',
+    choicepic1: 'img/instruments-small/placeholder.svg',
+    
     choice2: 'Taepyeongso',
+    choicepic2: 'img/instruments-small/placeholder.svg',
+
     choice3: 'Daegeum',
+    choicepic3: 'img/instruments-small/placeholder.svg',
+
     choice4: 'Gayageum',
+    choicepic4: 'img/instruments-small/gayageum-small.svg',
+
     answer: 3
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackTaepyeongso.mp3',
     choice1: 'Haegeum',
+    choicepic1: 'img/instruments-small/haegeum-small.svg',
+
     choice2: 'Taepyeongso',
+    choicepic2: 'img/instruments-small/placeholder.svg',
+
     choice3: 'Hyang Bipa',
+    choicepic3: 'img/instruments-small/bipa-small.svg',
+
     choice4: 'Danso',
+    choicepic4: 'img/instruments-small/placeholder.svg',
+
     answer: 2
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackDanso.mp3',
     choice1: 'Danso',
+    choicepic1: 'img/instruments-small/placeholder.svg',
+
     choice2: 'Hyang Piri',
+    choicepic2: 'img/instruments-small/placeholder.svg',
+
     choice3: 'Geomungo',
+    choicepic3: 'img/instruments-small/geomungo-small.svg',
+
     choice4: 'Daegeum',
+    choicepic4: 'img/instruments-small/placeholder.svg',
+
     answer: 1
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackJing.mp3',
     choice1: 'Jing',
+    choicepic1: 'img/instruments-small/jing-small.svg',
+
     choice2: 'Sogo',
+    choicepic2: 'img/instruments-small/placeholder.svg',
+
     choice3: 'Gayageum',
+    choicepic3: 'img/instruments-small/gayageum-small.svg',
+
     choice4: 'Hyang Piri',
+    choicepic4: 'img/instruments-small/placeholder.svg',
+
     answer: 1
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangBipa.mp3',
     choice1: 'Geomungo',
-    choice2: 'Hyang Bipa',
-    choice3: 'Gayageum',
+    choicepic1: 'img/instruments-small/geomungo-small.svg',
+
+    choice2: 'Gayageum',
+    choicepic2: 'img/instruments-small/gayageum-small.svg',
+
+    choice3: 'Hyang Bipa',
+    choicepic3: 'img/instruments-small/bipa-small.svg',
+
     choice4: 'Kkwaenggwari',
-    answer: 2
+    choicepic4: 'img/instruments-small/kkwaenggwari-small.svg',
+
+    answer: 3
 },
 ]
 
@@ -168,16 +285,56 @@ getNewQuestion = () => {
         choice.innerText = currentQuestion['choice' + number];
     });
 
+    choicePics.forEach(pic => {
+        const number = pic.dataset['number'];
+        pic.src = currentQuestion['choicepic' + number];
+    })
+
     // Remove this question from available questions
     availableQuestions.splice(questionIndex, 1);
 
     acceptingAnswers = true;
 };
 
+choiceContainers.forEach(container => {
+    container.addEventListener('click', e => {
+        if(!acceptingAnswers) return;
+        acceptingAnswers = false;
+
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.children[1].dataset['number'];
+
+        // Current question icon in progress bar
+        let currentQuestionIcon = document.getElementById('progress-icon-'+questionCounter);
+
+        // Correct or incorrect answer
+        let validation = '';
+        if (selectedAnswer == currentQuestion.answer) {
+            validation = 'correct';
+            selectedChoice.children[1].innerText += ' 👏🏼'
+            currentQuestionIcon.innerText = '👏🏼'
+            incrementScore();
+        }
+        else {
+            validation = 'incorrect';
+            selectedChoice.children[1].innerText += ' 💩'
+            currentQuestionIcon.innerText = '💩'
+        }
+
+        // Timeout before new question appears
+        setTimeout(() => {
+            getNewQuestion();
+            // Set icon to "Play"
+            document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
+        }, 1000);
+    })
+})
+
+/* Function that works with choice text, not a container
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return;
-        
+
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
@@ -189,13 +346,13 @@ choices.forEach(choice => {
         let validation = '';
         if (selectedAnswer == currentQuestion.answer) {
             validation = 'correct';
-            selectedChoice.innerHTML += ' 👏🏼'
+            selectedChoice.innerText += ' 👏🏼'
             currentQuestionIcon.innerText = '👏🏼'
             incrementScore();
         }
         else {
             validation = 'incorrect';
-            selectedChoice.innerHTML += ' 💩'
+            selectedChoice.innerText += ' 💩'
             currentQuestionIcon.innerText = '💩'
         }
 
@@ -207,6 +364,7 @@ choices.forEach(choice => {
         }, 1000);
     });
 });
+*/
 
 incrementScore = () => {
     score++;

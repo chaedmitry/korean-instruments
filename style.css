@@ -212,13 +212,12 @@ button:focus {outline:0;}
 }
 @media (hover:hover) and (pointer:fine) {
     .button-link:hover, .choice-container:hover {
-        background-color: rgba(0,0,0,.04);
         border-color: #000;
+        background-color: rgba(0,0,0,.02);
     }
 }
 .button-link:active, .choice-container:active {
-    background-color: rgba(0,0,0,1);
-    color: white;
+    background-color: rgba(0,0,0,.04);
 }
 
 /* Quiz app */
@@ -236,6 +235,11 @@ button:focus {outline:0;}
 
 .choice-container {
     margin: 0.5rem 0.25rem;
+}
+
+.choice-pic, .choice-text {
+    user-select: none;
+    pointer-events: none;
 }
 
 #progress {
