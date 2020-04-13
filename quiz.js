@@ -312,13 +312,13 @@ choiceContainers.forEach(container => {
         let validation = '';
         if (selectedAnswer == currentQuestion.answer) {
             validation = 'correct';
-            selectedChoice.children[1].innerText += ' 👏🏼'
+            selectedChoice.children[1].innerText = '👏🏼'
             currentQuestionIcon.innerText = '👏🏼'
             incrementScore();
         }
         else {
             validation = 'incorrect';
-            selectedChoice.children[1].innerText += ' 💩'
+            selectedChoice.children[1].innerText = '💩'
             currentQuestionIcon.innerText = '💩'
         }
 

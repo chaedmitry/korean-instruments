@@ -5,11 +5,11 @@
 <path d="M46.5 84L72.5 85L52 91.5L33.5 82.5M46.5 84L68.5 78L42 74M46.5 84L27.75 74M42 74L65.5 67L40 61.5M42 74L25 65.5M40 61.5L64.5 55.5L40 49.5M40 61.5L24 57M40 49.5L66 43L42 37.5M40 49.5L24.25 50M42 37.5L68.5 34L46.5 27.5M42 37.5L25.75 42.5M46.5 27.5L73 26.5L52.5 20.25L32.25 30.5M46.5 27.5L28.75 35.5" stroke="black" stroke-miterlimit="1.88813" stroke-linecap="round" stroke-dasharray="1 2"/>
 <rect x="63.5" y="54.5" width="2" height="2" rx="1" fill="black"/>
 <rect x="65" y="42" width="2" height="2" rx="1" fill="black"/>
-<rect x="38.5" y="48" width="3" height="3" rx="1.5" fill="black"/>
-<rect x="38.5" y="60" width="3" height="3" rx="1.5" fill="black"/>
-<rect x="40.5" y="72.5" width="3" height="3" rx="1.5" fill="black"/>
-<rect x="45" y="82.5" width="3" height="3" rx="1.5" fill="black"/>
-<rect x="40.5" y="36" width="3" height="3" rx="1.5" fill="black"/>
+<rect x="38" y="48" width="3" height="3" rx="1.5" fill="black"/>
+<rect x="38" y="60" width="3" height="3" rx="1.5" fill="black"/>
+<rect x="41" y="72" width="3" height="3" rx="1.5" fill="black"/>
+<rect x="45" y="82" width="3" height="3" rx="1.5" fill="black"/>
+<rect x="41" y="36" width="3" height="3" rx="1.5" fill="black"/>
 <rect x="45" y="26" width="3" height="3" rx="1.5" fill="black"/>
 <rect x="64.5" y="66" width="2" height="2" rx="1" fill="black"/>
 <rect x="67.5" y="77" width="2" height="2" rx="1" fill="black"/>
