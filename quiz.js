@@ -7,13 +7,16 @@ let questionCounterText = document.getElementById('question-counter-text');
 // Button "Play"
 let buttonPlay = document.getElementById('button-play');
 
-// Answer options containers
+// Choices parent container
+let choices = document.getElementById('choices');
+
+// Choice containers
 let choiceContainers = Array.from(document.getElementsByClassName('choice-container'));
 
-// Answer options text
-const choices = Array.from(document.getElementsByClassName('choice-text'));
+// Choices text
+const choiceTexts = Array.from(document.getElementsByClassName('choice-text'));
 
-// Answer options pictures
+// Choices pictures
 const choicePics = Array.from(document.getElementsByClassName('choice-pic'));
 
 // Button "Start over"
@@ -286,7 +289,7 @@ getNewQuestion = () => {
     })
 
     // Fetch choice text from question object and insert to every choice
-    choices.forEach(choice => {
+    choiceTexts.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     });
@@ -339,9 +342,7 @@ endGame = () => {
     track.pause();
     question.innerHTML = "You've got "+score+"&nbsp;"+"out"+"&nbsp;"+"of"+"&nbsp;"+MAX_QUESTIONS+"!";
     buttonPlay.style.visibility = 'hidden';
-    choiceContainers.forEach(container => {
-        container.style.display = 'none';
-    });
+    choices.style.display = 'none';
     startOverButton.style.display = '';
 }
 
@@ -371,40 +372,3 @@ track.addEventListener('ended', function(){
 });
 
 startGame();
-
-
-/* Function that works with choice text, not a container
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return;
-
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-
-        // Current question icon in progress bar
-        let currentQuestionIcon = document.getElementById('progress-icon-'+questionCounter);
-
-        // Correct or incorrect answer
-        let validation = '';
-        if (selectedAnswer == currentQuestion.answer) {
-            validation = 'correct';
-            selectedChoice.innerText += ' 👏🏼'
-            currentQuestionIcon.innerText = '👏🏼'
-            incrementScore();
-        }
-        else {
-            validation = 'incorrect';
-            selectedChoice.innerText += ' 💩'
-            currentQuestionIcon.innerText = '💩'
-        }
-
-        // Timeout before new question appears
-        setTimeout(() => {
-            getNewQuestion();
-            // Set icon to "Play"
-            document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
-        }, 1000);
-    });
-});
-*/
