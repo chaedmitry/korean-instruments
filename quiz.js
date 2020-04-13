@@ -67,7 +67,7 @@ let questions = [
     choicepic1: 'img/instruments-small/ajaeng-small.svg',
 
     choice2: 'Sogo',
-    choicepic2: 'img/instruments-small/placeholder.svg',
+    choicepic2: 'img/instruments-small/sogo-small.svg',
 
     choice3: 'Haegeum',
     choicepic3: 'img/instruments-small/haegeum-small.svg',
@@ -80,23 +80,23 @@ let questions = [
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangPiri.mp3',
     choice1: 'Taepyeongso',
-    choicepic1: 'img/instruments-small/placeholder.svg',
+    choicepic1: 'img/instruments-small/taepyeongso-small.svg',
 
     choice2: 'Daegeum',
-    choicepic2: 'img/instruments-small/placeholder.svg',
+    choicepic2: 'img/instruments-small/daegeum-small.svg',
 
     choice3: 'Buk',
     choicepic3: 'img/instruments-small/buk-small.svg',
 
     choice4: 'Hyang Piri',
-    choicepic4: 'img/instruments-small/placeholder.svg',
+    choicepic4: 'img/instruments-small/hyangpiri-small.svg',
 
     answer: 4
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackKkwaenggwari.mp3',
-    choice1: 'Danso',
-    choicepic1: 'img/instruments-small/placeholder.svg',
+    choice1: 'Hyang Bipa',
+    choicepic1: 'img/instruments-small/bipa-small.svg',
 
     choice2: 'Kkwaenggwari',
     choicepic2: 'img/instruments-small/kkwaenggwari-small.svg',
@@ -115,20 +115,20 @@ let questions = [
     choicepic1: 'img/instruments-small/janggo-small.svg',
 
     choice2: 'Daegeum',
-    choicepic2: 'img/instruments-small/placeholder.svg',
+    choicepic2: 'img/instruments-small/daegeum-small.svg',
 
     choice3: 'Buk',
     choicepic3: 'img/instruments-small/buk-small.svg',
 
     choice4: 'Sogo',
-    choicepic4: 'img/instruments-small/placeholder.svg',
+    choicepic4: 'img/instruments-small/sogo-small.svg',
 
     answer: 4
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackAjaeng.mp3',
     choice1: 'Hyang Piri',
-    choicepic1: 'img/instruments-small/placeholder.svg',
+    choicepic1: 'img/instruments-small/hyangpiri-small.svg',
 
     choice2: 'Ajaeng',
     choicepic2: 'img/instruments-small/ajaeng-small.svg',
@@ -147,7 +147,7 @@ let questions = [
     choicepic1: 'img/instruments-small/haegeum-small.svg',
 
     choice2: 'Danso',
-    choicepic2: 'img/instruments-small/placeholder.svg',
+    choicepic2: 'img/instruments-small/danso-small.svg',
 
     choice3: 'Geomungo',
     choicepic3: 'img/instruments-small/geomungo-small.svg',
@@ -176,13 +176,13 @@ let questions = [
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackDaegeum.mp3',
     choice1: 'Danso',
-    choicepic1: 'img/instruments-small/placeholder.svg',
+    choicepic1: 'img/instruments-small/danso-small.svg',
     
     choice2: 'Taepyeongso',
-    choicepic2: 'img/instruments-small/placeholder.svg',
+    choicepic2: 'img/instruments-small/taepyeongso-small.svg',
 
     choice3: 'Daegeum',
-    choicepic3: 'img/instruments-small/placeholder.svg',
+    choicepic3: 'img/instruments-small/daegeum-small.svg',
 
     choice4: 'Gayageum',
     choicepic4: 'img/instruments-small/gayageum-small.svg',
@@ -195,29 +195,29 @@ let questions = [
     choicepic1: 'img/instruments-small/haegeum-small.svg',
 
     choice2: 'Taepyeongso',
-    choicepic2: 'img/instruments-small/placeholder.svg',
+    choicepic2: 'img/instruments-small/taepyeongso-small.svg',
 
     choice3: 'Hyang Bipa',
     choicepic3: 'img/instruments-small/bipa-small.svg',
 
     choice4: 'Danso',
-    choicepic4: 'img/instruments-small/placeholder.svg',
+    choicepic4: 'img/instruments-small/danso-small.svg',
 
     answer: 2
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackDanso.mp3',
     choice1: 'Danso',
-    choicepic1: 'img/instruments-small/placeholder.svg',
+    choicepic1: 'img/instruments-small/danso-small.svg',
 
     choice2: 'Hyang Piri',
-    choicepic2: 'img/instruments-small/placeholder.svg',
+    choicepic2: 'img/instruments-small/hyangpiri-small.svg',
 
     choice3: 'Geomungo',
     choicepic3: 'img/instruments-small/geomungo-small.svg',
 
     choice4: 'Daegeum',
-    choicepic4: 'img/instruments-small/placeholder.svg',
+    choicepic4: 'img/instruments-small/daegeum-small.svg',
 
     answer: 1
 },
@@ -227,13 +227,13 @@ let questions = [
     choicepic1: 'img/instruments-small/jing-small.svg',
 
     choice2: 'Sogo',
-    choicepic2: 'img/instruments-small/placeholder.svg',
+    choicepic2: 'img/instruments-small/sogo-small.svg',
 
     choice3: 'Gayageum',
     choicepic3: 'img/instruments-small/gayageum-small.svg',
 
     choice4: 'Hyang Piri',
-    choicepic4: 'img/instruments-small/placeholder.svg',
+    choicepic4: 'img/instruments-small/hyangpiri-small.svg',
 
     answer: 1
 },
@@ -279,16 +279,17 @@ getNewQuestion = () => {
     // Set a track depending on question
     track.src = currentQuestion.question;
     
-    // Fetch choices from question object
-    choices.forEach(choice => {
-        const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
-    });
-
+    // Fetch choice pics from question object and insert to every choice
     choicePics.forEach(pic => {
         const number = pic.dataset['number'];
         pic.src = currentQuestion['choicepic' + number];
     })
+
+    // Fetch choice text from question object and insert to every choice
+    choices.forEach(choice => {
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number];
+    });
 
     // Remove this question from available questions
     availableQuestions.splice(questionIndex, 1);
@@ -330,42 +331,6 @@ choiceContainers.forEach(container => {
     })
 })
 
-/* Function that works with choice text, not a container
-choices.forEach(choice => {
-    choice.addEventListener('click', e => {
-        if(!acceptingAnswers) return;
-
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-
-        // Current question icon in progress bar
-        let currentQuestionIcon = document.getElementById('progress-icon-'+questionCounter);
-
-        // Correct or incorrect answer
-        let validation = '';
-        if (selectedAnswer == currentQuestion.answer) {
-            validation = 'correct';
-            selectedChoice.innerText += ' 👏🏼'
-            currentQuestionIcon.innerText = '👏🏼'
-            incrementScore();
-        }
-        else {
-            validation = 'incorrect';
-            selectedChoice.innerText += ' 💩'
-            currentQuestionIcon.innerText = '💩'
-        }
-
-        // Timeout before new question appears
-        setTimeout(() => {
-            getNewQuestion();
-            // Set icon to "Play"
-            document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
-        }, 1000);
-    });
-});
-*/
-
 incrementScore = () => {
     score++;
 }
@@ -406,3 +371,40 @@ track.addEventListener('ended', function(){
 });
 
 startGame();
+
+
+/* Function that works with choice text, not a container
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+
+        // Current question icon in progress bar
+        let currentQuestionIcon = document.getElementById('progress-icon-'+questionCounter);
+
+        // Correct or incorrect answer
+        let validation = '';
+        if (selectedAnswer == currentQuestion.answer) {
+            validation = 'correct';
+            selectedChoice.innerText += ' 👏🏼'
+            currentQuestionIcon.innerText = '👏🏼'
+            incrementScore();
+        }
+        else {
+            validation = 'incorrect';
+            selectedChoice.innerText += ' 💩'
+            currentQuestionIcon.innerText = '💩'
+        }
+
+        // Timeout before new question appears
+        setTimeout(() => {
+            getNewQuestion();
+            // Set icon to "Play"
+            document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
+        }, 1000);
+    });
+});
+*/

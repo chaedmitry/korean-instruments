@@ -1,0 +1,12 @@
+<svg width="112" height="112" viewBox="0 0 112 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 81L56 31L91 81H21Z" fill="#EBDCF9"/>
+<path d="M57.5 33H58.5V34.75M57.5 33V27M57.5 33C57.5 33 56.75 33.5 56 33.5C55.25 33.5 54.5 33 54.5 33M57.5 27C57.5 27 57 27.5 56 27.5C55 27.5 54.5 27 54.5 27M57.5 27V13.5H54.5V27M54.5 27V33M54.5 33H53.5V34.75M53.5 34.75V35.75M53.5 34.75C53.5 34.75 54.5 35.5 56 35.5C57.5 35.5 58.5 34.75 58.5 34.75M58.5 34.75V35.75M53.5 35.75V97.5C53.5 97.5 54.5 98.5 56 98.5C57.5 98.5 58.5 97.5 58.5 97.5V35.75M53.5 35.75C53.5 35.75 54.5 36.5 56 36.5C57.5 36.5 58.5 35.75 58.5 35.75" stroke="black"/>
+<circle cx="56" cy="90" r="1" fill="black"/>
+<circle cx="56" cy="84" r="1" fill="black"/>
+<circle cx="56" cy="77" r="1" fill="black"/>
+<circle cx="56" cy="71" r="1" fill="black"/>
+<circle cx="56" cy="64" r="1" fill="black"/>
+<circle cx="56" cy="58" r="1" fill="black"/>
+<circle cx="56" cy="51" r="1" fill="black"/>
+<path d="M57 18H55V19H57V18Z" fill="black"/>
+</svg>
