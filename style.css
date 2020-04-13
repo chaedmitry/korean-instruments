@@ -261,6 +261,10 @@ button:focus {outline:0;}
     display: inline-block;
 }
 
+#restart {
+    margin-bottom: 3rem;
+}
+
 /* Footer */
 
 footer {
