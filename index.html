@@ -3,7 +3,7 @@
 
 <head>
     <title>Sound of Korean Musical Instruments</title>
-    <link rel='stylesheet', href='style.css'>
+    <link rel='stylesheet' href='style.css'>
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -101,7 +101,6 @@
 
         <li class='instrument haegeum' onclick="playPause(3);swapIcon('iconHaegeum')">
             <div class='illustration'>
-                <object type="image/svg+xml" data="img/instruments-shapes/haegeum-shape.svg" class='shape'></object>
                 <object type="image/svg+xml" data="img/intruments-icons/haegeum-union.svg" class='icon'></object>
             </div>
             <p class='name'>
@@ -265,7 +264,7 @@
         </li>
     </ul>
 
-    <audio id='track'></audio>
+    <audio id='track' src='' type='audio/mpeg'></audio>
 
     <section class='quiz'>
         <h2>👏🏼 Quiz time 💩</h2>

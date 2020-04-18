@@ -53,7 +53,7 @@ playPause = (i) => {
 swapIcon = (iconID) => {
     if (!track.paused) {
         document.getElementById(iconID).setAttribute('href','#icon-pause');
-        iconList.forEach(function(icon) {
+        iconList.forEach(icon => {
             if (icon !== iconID) {
                 document.getElementById(icon).setAttribute('href', '#icon-play');
             }
@@ -64,8 +64,8 @@ swapIcon = (iconID) => {
     }
 }
 // Swap all icons to "Play" when track is ended
-track.addEventListener('ended', function(){
-    iconList.forEach(function(icon) {
+track.addEventListener('ended', e => {
+    iconList.forEach(icon => {
         document.getElementById(icon).setAttribute('href', '#icon-play');
     })
 })

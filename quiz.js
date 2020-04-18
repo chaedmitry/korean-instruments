@@ -367,7 +367,7 @@ questionSwapIcon = () => {
 };
 
 // Swap icon to "Play" when track is ended
-track.addEventListener('ended', function(){
+track.addEventListener('ended', e => {
     document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
 });
 
