@@ -125,7 +125,7 @@ header {
     flex-flow: row wrap;
 }
 
-.instrument {
+.grid-item {
     min-width: 12rem;
     max-width: 100%;
     margin-bottom: 3rem;
@@ -144,16 +144,6 @@ header {
 
 .icon {
     margin: auto;
-    z-index: 1;
-}
-
-.shape {
-    display: block;
-    position: absolute;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 button:focus {outline:0;}
@@ -166,7 +156,7 @@ button:focus {outline:0;}
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 } 
 @media (hover:hover) and (pointer:fine) {
-    .instrument:hover svg use, .button-play:hover svg use, .button-play:hover, .icon-play:hover {
+    .grid-item:hover svg use, .button-play:hover svg use, .button-play:hover, .icon-play:hover {
         fill: #000;
     }
 }
@@ -317,7 +307,7 @@ footer {
     .grid {
         margin: 0 2rem;
     }
-    .instrument {
+    .grid-item {
         flex: 0 0 25%;
     }
     footer {
@@ -337,7 +327,7 @@ footer {
     }
 }
 @media (max-width: 920px) { /* 3 instruments in a row */
-    .instrument {
+    .grid-item {
         flex: 0 0 33%;
     }
     .learn-more {
@@ -351,7 +341,7 @@ footer {
     }
 }
 @media (max-width: 720px) { /* 2 instruments in a row */
-    .instrument {
+    .grid-item {
         flex: 0 0 50%;
     }
     footer {
@@ -386,7 +376,7 @@ footer {
     footer {
         padding: 0 1.5rem 1rem 1.5rem;
     }
-    .instrument {
+    .grid-item {
         margin-bottom: 2rem;
         flex: 1 0 100%;
     }
