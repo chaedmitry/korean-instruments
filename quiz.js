@@ -42,8 +42,8 @@ let questions = [
     choice3: 'Haegeum',
     choicepic3: 'img/instruments-small/haegeum-small.svg',
 
-    choice4: 'Jing',
-    choicepic4: 'img/instruments-small/jing-small.svg',
+    choice4: 'Geomungo',
+    choicepic4: 'img/instruments-small/geomungo-small.svg',
 
     answer: 1
 },
@@ -55,8 +55,8 @@ let questions = [
     choice2: 'Buk',
     choicepic2: 'img/instruments-small/buk-small.svg',
 
-    choice3: 'Hyang Bipa',
-    choicepic3: 'img/instruments-small/bipa-small.svg',
+    choice3: 'Sogo',
+    choicepic3: 'img/instruments-small/sogo-small.svg',
 
     choice4: 'Janggo',
     choicepic4: 'img/instruments-small/janggo-small.svg',
@@ -88,8 +88,8 @@ let questions = [
     choice2: 'Daegeum',
     choicepic2: 'img/instruments-small/daegeum-small.svg',
 
-    choice3: 'Buk',
-    choicepic3: 'img/instruments-small/buk-small.svg',
+    choice3: 'Danso',
+    choicepic3: 'img/instruments-small/danso-small.svg',
 
     choice4: 'Hyang Piri',
     choicepic4: 'img/instruments-small/hyangpiri-small.svg',
@@ -98,8 +98,8 @@ let questions = [
 },
 {
     question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackKkwaenggwari.mp3',
-    choice1: 'Hyang Bipa',
-    choicepic1: 'img/instruments-small/bipa-small.svg',
+    choice1: 'Jing',
+    choicepic1: 'img/instruments-small/jing-small.svg',
 
     choice2: 'Kkwaenggwari',
     choicepic2: 'img/instruments-small/kkwaenggwari-small.svg',
@@ -117,8 +117,8 @@ let questions = [
     choice1: 'Janggo',
     choicepic1: 'img/instruments-small/janggo-small.svg',
 
-    choice2: 'Daegeum',
-    choicepic2: 'img/instruments-small/daegeum-small.svg',
+    choice2: 'Jing',
+    choicepic2: 'img/instruments-small/jing-small.svg',
 
     choice3: 'Buk',
     choicepic3: 'img/instruments-small/buk-small.svg',
@@ -149,14 +149,14 @@ let questions = [
     choice1: 'Haegeum',
     choicepic1: 'img/instruments-small/haegeum-small.svg',
 
-    choice2: 'Danso',
-    choicepic2: 'img/instruments-small/danso-small.svg',
+    choice2: 'Gayageum',
+    choicepic2: 'img/instruments-small/gayageum-small.svg',
 
     choice3: 'Geomungo',
     choicepic3: 'img/instruments-small/geomungo-small.svg',
     
-    choice4: 'Janggo',
-    choicepic4: 'img/instruments-small/janggo-small.svg',
+    choice4: 'Hyang Bipa',
+    choicepic4: 'img/instruments-small/bipa-small.svg',
     
     answer: 3
 },
@@ -187,8 +187,8 @@ let questions = [
     choice3: 'Daegeum',
     choicepic3: 'img/instruments-small/daegeum-small.svg',
 
-    choice4: 'Gayageum',
-    choicepic4: 'img/instruments-small/gayageum-small.svg',
+    choice4: 'Hyang Piri',
+    choicepic4: 'img/instruments-small/hyangpiri-small.svg',
 
     answer: 3
 },
@@ -200,8 +200,8 @@ let questions = [
     choice2: 'Taepyeongso',
     choicepic2: 'img/instruments-small/taepyeongso-small.svg',
 
-    choice3: 'Hyang Bipa',
-    choicepic3: 'img/instruments-small/bipa-small.svg',
+    choice3: 'Hyang Piri',
+    choicepic3: 'img/instruments-small/hyangpiri-small.svg',
 
     choice4: 'Danso',
     choicepic4: 'img/instruments-small/danso-small.svg',
@@ -216,8 +216,8 @@ let questions = [
     choice2: 'Hyang Piri',
     choicepic2: 'img/instruments-small/hyangpiri-small.svg',
 
-    choice3: 'Geomungo',
-    choicepic3: 'img/instruments-small/geomungo-small.svg',
+    choice3: 'Taepyeongso',
+    choicepic3: 'img/instruments-small/taepyeongso-small.svg',
 
     choice4: 'Daegeum',
     choicepic4: 'img/instruments-small/daegeum-small.svg',
@@ -232,11 +232,11 @@ let questions = [
     choice2: 'Sogo',
     choicepic2: 'img/instruments-small/sogo-small.svg',
 
-    choice3: 'Gayageum',
-    choicepic3: 'img/instruments-small/gayageum-small.svg',
+    choice3: 'Buk',
+    choicepic3: 'img/instruments-small/buk-small.svg',
 
-    choice4: 'Hyang Piri',
-    choicepic4: 'img/instruments-small/hyangpiri-small.svg',
+    choice4: 'Kkwaenggwari',
+    choicepic4: 'img/instruments-small/kkwaenggwari-small.svg',
 
     answer: 1
 },
@@ -251,8 +251,8 @@ let questions = [
     choice3: 'Hyang Bipa',
     choicepic3: 'img/instruments-small/bipa-small.svg',
 
-    choice4: 'Kkwaenggwari',
-    choicepic4: 'img/instruments-small/kkwaenggwari-small.svg',
+    choice4: 'Ajaeng',
+    choicepic4: 'img/instruments-small/ajaeng-small.svg',
 
     answer: 3
 },
