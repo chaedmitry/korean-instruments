@@ -258,7 +258,7 @@ let questions = [
 },
 ]
 
-const MAX_QUESTIONS = 5;
+const maxQuestions = 5;
 
 startGame = () => {
     questionCounter = 0;
@@ -267,13 +267,13 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    if(availableQuestions.length === 0 || questionCounter >= maxQuestions) {
     //game ends
     return endGame();
     };
 
     questionCounter++;
-    questionCounterText.innerText = '#'+questionCounter + '/' + MAX_QUESTIONS;
+    questionCounterText.innerText = '#'+questionCounter + '/' + maxQuestions;
 
     // Randomly choose a question
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -340,7 +340,7 @@ incrementScore = () => {
 
 endGame = () => {
     track.pause();
-    question.innerHTML = "You've got "+score+"&nbsp;"+"out"+"&nbsp;"+"of"+"&nbsp;"+MAX_QUESTIONS+"!";
+    question.innerHTML = "You've got "+score+"&nbsp;"+"out"+"&nbsp;"+"of"+"&nbsp;"+maxQuestions+"!";
     buttonPlay.style.visibility = 'hidden';
     choices.style.display = 'none';
     startOverButton.style.display = '';
