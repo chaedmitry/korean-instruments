@@ -69,8 +69,8 @@ let questions = [
     choice1: 'Ajaeng',
     choicepic1: 'img/instruments-small/ajaeng-small.svg',
 
-    choice2: 'Sogo',
-    choicepic2: 'img/instruments-small/sogo-small.svg',
+    choice2: 'Hyang Piri',
+    choicepic2: 'img/instruments-small/hyangpiri-small.svg',
 
     choice3: 'Haegeum',
     choicepic3: 'img/instruments-small/haegeum-small.svg',

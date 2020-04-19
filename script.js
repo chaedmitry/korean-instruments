@@ -17,7 +17,7 @@ let trackList = [
     'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangPiri.mp3' //13
 ] 
 
-//Icons
+// Icons
 let iconList = [
     'iconGayageum',
     'iconGeomungo',
@@ -34,7 +34,6 @@ let iconList = [
     'iconDanso',
     'iconHyangPiri'
 ]
-
 
 playPause = (i) => {
     if (track.paused) {
