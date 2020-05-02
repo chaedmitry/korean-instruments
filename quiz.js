@@ -371,4 +371,10 @@ track.addEventListener('ended', e => {
     document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
 });
 
+// Listen for click on "Play" button
+document.querySelector('#button-play').addEventListener('click', () => {
+    questionPlayPause();
+    questionSwapIcon();
+});
+
 startGame();

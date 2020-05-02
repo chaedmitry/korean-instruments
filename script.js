@@ -68,3 +68,19 @@ track.addEventListener('ended', e => {
         document.getElementById(icon).setAttribute('href', '#icon-play');
     })
 })
+
+// Listening clicks on instruments
+document.querySelector('li[data-instrument="gayageum"]').addEventListener('click', () => {playPause(0);swapIcon('iconGayageum');});
+document.querySelector('li[data-instrument="geomungo"]').addEventListener('click', () => {playPause(1);swapIcon('iconGeomungo');});
+document.querySelector('li[data-instrument="ajaeng"]').addEventListener('click', () => {playPause(2);swapIcon('iconAjaeng');});
+document.querySelector('li[data-instrument="haegeum"]').addEventListener('click', () => {playPause(3);swapIcon('iconHaegeum');});
+document.querySelector('li[data-instrument="hyangbipa"]').addEventListener('click', () => {playPause(4);swapIcon('iconBipa');});
+document.querySelector('li[data-instrument="janggo"]').addEventListener('click', () => {playPause(5);swapIcon('iconJanggo');});
+document.querySelector('li[data-instrument="jing"]').addEventListener('click', () => {playPause(6);swapIcon('iconJing');});
+document.querySelector('li[data-instrument="buk"]').addEventListener('click', () => {playPause(7);swapIcon('iconBuk');});
+document.querySelector('li[data-instrument="kkwaenggwari"]').addEventListener('click', () => {playPause(8);swapIcon('iconKkwaenggwari');});
+document.querySelector('li[data-instrument="sogo"]').addEventListener('click', () => {playPause(9);swapIcon('iconSogo');});
+document.querySelector('li[data-instrument="daegeum"]').addEventListener('click', () => {playPause(10);swapIcon('iconDaegeum');});
+document.querySelector('li[data-instrument="taepyeongso"]').addEventListener('click', () => {playPause(11);swapIcon('iconTaepyongso');});
+document.querySelector('li[data-instrument="danso"]').addEventListener('click', () => {playPause(12);swapIcon('iconDanso');});
+document.querySelector('li[data-instrument="hyangpiri"]').addEventListener('click', () => {playPause(13);swapIcon('iconHyangPiri');});
