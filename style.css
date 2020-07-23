@@ -138,14 +138,14 @@ header {
 
 .illustration {
     height: 224px;
-    display: flex;
+    text-align: center;
     position: relative;
     pointer-events: none;
     user-select: none;
 }
 
 .icon {
-    margin: auto;
+    display: inline-block;
 }
 
 button:focus {outline:0;}
