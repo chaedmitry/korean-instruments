@@ -121,7 +121,7 @@ header {
 /* Instruments grid */
 
 .grid {
-    margin: 0 2.5rem;
+    margin: 2rem 2.5rem;
     padding: 0;
     display: flex;
     flex-flow: row wrap;
@@ -175,9 +175,10 @@ button:focus {outline:0;}
 /* Quiz section */
 
 .quiz {
-    margin: 8rem 1.5rem;
+    padding: 6rem 1.5rem;
     display: block;
     text-align: center;
+    background-color: #f3f3f3;
 }
 
 .quiz h2 {
