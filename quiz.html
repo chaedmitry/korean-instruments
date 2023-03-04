@@ -57,14 +57,13 @@
     <link rel="preload" as="image" href="img/instruments-small/jing-small.svg">
 </head>
 <body>
-    <svg display="none" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg display="none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <g id='icon-play'>
-                <path d="M56.0179 39.5802L29.1049 22.1659C28.7723 21.9506 28.3333 22.1894 28.3333 22.5857V57.4142C28.3333 57.8105 28.7723 58.0493 29.1049 57.834L56.0179 40.4197C56.3224 40.2227 56.3224 39.7772 56.0179 39.5802Z" stroke="black" stroke-width="2"/>
+                <path d="M17.876 11.584L5.77735 3.51823C5.44507 3.29672 5 3.53491 5 3.93426V20.0657C5 20.4651 5.44507 20.7033 5.77735 20.4818L17.876 12.416C18.1728 12.2181 18.1728 11.7819 17.876 11.584Z" stroke="black" stroke-width="2"/>
             </g>
             <g id='icon-pause'>
-                <path d="M25 25.5C25 25.2239 25.2239 25 25.5 25H34.5C34.7761 25 35 25.2239 35 25.5V54.5C35 54.7761 34.7761 55 34.5 55H25.5C25.2239 55 25 54.7761 25 54.5V25.5Z" stroke="black" stroke-width="2"/>
-                <path d="M45 25.5C45 25.2239 45.2239 25 45.5 25H54.5C54.7761 25 55 25.2239 55 25.5V54.5C55 54.7761 54.7761 55 54.5 55H45.5C45.2239 55 45 54.7761 45 54.5V25.5Z" stroke="black" stroke-width="2"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 4C4.67157 4 4 4.67157 4 5.5V18.5C4 19.3284 4.67157 20 5.5 20H9.5C10.3284 20 11 19.3284 11 18.5V5.5C11 4.67157 10.3284 4 9.5 4H5.5ZM6 18V6H9V18H6ZM14.5 4C13.6716 4 13 4.67157 13 5.5V18.5C13 19.3284 13.6716 20 14.5 20H18.5C19.3284 20 20 19.3284 20 18.5V5.5C20 4.67157 19.3284 4 18.5 4H14.5ZM15 18V6H18V18H15Z" fill="black"/>
             </g>
         </defs>
     </svg>
@@ -77,27 +76,29 @@
     <audio id='track' src='' type='audio/mpeg'></audio>
     <section id='quiz-container'>
         
-        <button class="button-play no-select" id="button-play">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <h2 id='question'>Listen and guess <span id='question-counter-text'>1/5</span></h2>
+
+        <button class="button-link no-select" id="button-play">
+            <svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use id='icon-play-pause' href='#icon-play'></use>
             </svg>
+            <span>Listen</span>
         </button>
-        
-        <h2 id='question'><span id='question-counter-text'>1/5</span>: listen and&nbsp;guess</h2>
+
         <div id='choices'>
-            <div class='choice-container no-select'>
+            <div class='choice-container no-select' tabindex="0">
                 <img class='choice-pic' data-number='1' src=''>
                 <p class='choice-text' data-number='1'>Choice 1</p>
             </div>
-            <div class='choice-container no-select'>
+            <div class='choice-container no-select' tabindex="0">
                 <img class='choice-pic' data-number='2' src=''>
                 <p class='choice-text' data-number='2'>Choice 2</p>
             </div>
-            <div class='choice-container no-select'>
+            <div class='choice-container no-select' tabindex="0">
                 <img class='choice-pic' data-number='3' src=''>
                 <p class='choice-text' data-number='3'>Choice 3</p>
             </div>
-            <div class='choice-container no-select'>
+            <div class='choice-container no-select' tabindex="0">
                 <img class='choice-pic' data-number='4' src=''>
                 <p class='choice-text' data-number='4'>Choice 4</p>
             </div>
@@ -114,12 +115,12 @@
     </section>
     <footer>
         <section class='credits'>
-            <h3>Sounds from</h3>
+            <h3>Sources</h3>
             <ul>
                 <li><a class='normal-link' href='http://www.gugak.go.kr/' target="_blank">National Gugak Center</a></li>
                 <li><a class='normal-link' href='https://freesound.org/people/ultradust/sounds/167382/' target="_blank">Andi Roselund</a></li>
                 <li><a class='normal-link' href='https://www.youtube.com/watch?v=rqRv-Cxagv0' target="_blank">NocutView</a></li>
-                <li><a class='normal-link' href='https://www.youtube.com/watch?v=WHYVR4JDy60' target="_blank">YTN News</a>.</li>
+                <li><a class='normal-link' href='https://www.youtube.com/watch?v=WHYVR4JDy60' target="_blank">YTN News</a></li>
             </ul>
         </section>
         <section class='learn-more'>
@@ -127,7 +128,6 @@
             <ul>
                 <li><a class='normal-link' href='https://artsandculture.google.com/exhibit/TQLCWFVCGDVvKQ' target='_blank'>Google Arts and Culture</a></li>
                 <li><a class='normal-link' href='https://omeka-s.grinnell.edu/s/MusicalInstruments/musical-instrument-search?q=korean&limit%5Bdcterms_coverage_s%5D%5B0%5D=South%20Korea' target='_blank'>Grinnel College</a></li>
-                <li><a class='normal-link' href='https://en.wikipedia.org/wiki/Traditional_Korean_musical_instruments' target='_blank'>Wikipedia</a>.</li>
             </ul>
         </section>
         <p class='author'>— <a class='normal-link' href='https://chae.design' target='_blank'>dmitrychae</a></p>

@@ -10,11 +10,11 @@
 
 html {
     font-family: 'Proza Libre', sans-serif;
-    font-size: 100%;
+    font-size: 16px;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     line-height: 1.5rem;
-    background: #fafafa;
+    background: hsl(0, 0%, 98%);
     margin: 0;
     height: 100%;
 }
@@ -114,6 +114,8 @@ header {
 }
 
 .description {
+    font-size: 1.25rem;
+    line-height: 2rem;
     margin: 0.5rem 0 0 0;
     flex: 1 1 40%;
 }
@@ -133,7 +135,7 @@ header {
     margin-bottom: 3rem;
     flex: 0 0 20%;
     cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
 }
 
 .illustration {
@@ -148,14 +150,19 @@ header {
     display: inline-block;
 }
 
-button:focus {outline:0;}
+#button-play {
+    margin: 1.5rem auto;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+}
 
 .button-play {
     display: inline-block;
     background: none;
     border: none;
     cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
 } 
 @media (hover:hover) and (pointer:fine) {
     .grid-item:hover svg use, .button-play:hover svg use, .button-play:hover, .icon-play:hover {
@@ -169,7 +176,7 @@ button:focus {outline:0;}
 }
 
 .hangeul {
-    color: #8C8C8C;
+    color: hsl(0, 0%, 50%);
 }
 
 /* Quiz section */
@@ -191,26 +198,56 @@ button:focus {outline:0;}
     margin-bottom: 1.5rem;
 }
 
-.button-link, .choice-container {
-    font-family: 'Proza Libre', sans-serif;
-    font-size: 1rem;
-    display: inline-block;
-    color: #000;
+.button-link {
     background: none;
-    border: 1px solid rgba(140,140,140,1);
-    border-radius: 0.25rem;
-    padding: 0.5rem 1rem;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
     cursor: pointer;
     text-decoration: none;
+    color:hsl(0, 0%, 0%);
+    border: 2px solid hsl(0, 0%, 0%);
+    border-radius: 4rem;
+    font-size: 1.25rem;
+}
+
+.button-icon {
+    margin-right: 0.25rem;
+}
+
+.choice-container {
+    display: block;
+    background: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0px 2px 0.5rem hsl(0, 0%, 90%);
+    -webkit-transition: top 300ms ease-in-out,
+                    all 100ms ease-in-out;
+    -moz-transition: top 300ms ease-in-out,
+                    all 100ms ease-in-out;
+    -o-transition: top 300ms ease-in-out,
+                    all 100ms ease-in-out;;
+    transition: top 300ms ease-in-out,
+                all 100ms ease-in-out;
+    top: 0;
 }
 @media (hover:hover) and (pointer:fine) {
-    .button-link:hover, .choice-container:hover {
-        border-color: #000;
-        background-color: rgba(0,0,0,.02);
+    .button-link:hover {
+        background-color:hsl(0, 0%, 90%);
+    }
+    .choice-container:hover {
+        box-shadow: 4px 12px 0.5rem hsl(0, 0%, 85%);
+        position: relative;
+        top: -0.25rem;
     }
 }
-.button-link:active, .choice-container:active {
-    background-color: rgba(0,0,0,.04);
+.button-link:active {
+    background-color:hsl(0, 0%, 80%);
+}
+.choice-container:active {
+    background-color: hsla(0, 0%, 98%);
+    position: relative;
+    top: -0.10rem;
 }
 
 /* Quiz app */
@@ -223,7 +260,7 @@ button:focus {outline:0;}
 }
 
 #question {
-    margin-bottom: 1rem;
+    margin: 1rem 0 0 0;
 }
 
 #choices {
@@ -245,12 +282,13 @@ button:focus {outline:0;}
 }
 
 #progress {
-    margin: 1rem;
+    padding: 2rem;
 }
 
 .progress-item {
-    width: 1.5rem;
-    height: 1.5rem;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2rem;
     display: inline-block;
 }
 
@@ -284,6 +322,7 @@ footer {
 }
 
 @media (max-width: 1200px) { /* 4 instruments in a row, header in 1 column*/
+    
     .nav-links {
         margin: 0 2rem;
     }
@@ -354,9 +393,14 @@ footer {
         text-align: left;
     }
 }
-@media (min-width: 526px) and (max-width: 695px) { /* flexible choices */
+@media (min-width: 356px) and (max-width: 695px) { /* flexible choices */
     .choice-container {
         flex: 1 0 40%;
+    }
+}
+@media (max-width: 695px) { /* flexible choices */
+    .choice-container {
+        padding: 0.5rem 0.25rem;
     }
 }
 @media (max-width: 480px) { /* 1 instrument in a row */
@@ -375,6 +419,8 @@ footer {
     }
     .description {
         width: 100%;
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
     footer {
         padding: 0 1.5rem 1rem 1.5rem;
@@ -385,10 +431,5 @@ footer {
     }
     #quiz-container {
         margin: auto 1rem;
-    }
-}
-@media (max-width: 355px) { /* flexible choices */
-    .choice-container {
-        padding: 0.5rem 0.25rem;
     }
 }

@@ -341,7 +341,7 @@ incrementScore = () => {
 endGame = () => {
     track.pause();
     question.innerHTML = "You've got "+score+"&nbsp;"+"out"+"&nbsp;"+"of"+"&nbsp;"+maxQuestions+"!";
-    buttonPlay.style.visibility = 'hidden';
+    buttonPlay.style.display = 'none';
     choices.style.display = 'none';
     startOverButton.style.display = '';
 }
