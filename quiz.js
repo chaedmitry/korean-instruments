@@ -1,3 +1,6 @@
+const winSound = new Audio ("sounds/correct.wav");
+const loseSound = new Audio ("sounds/fart.mp3");
+
 // Question string
 let question = document.getElementById('question');
 
@@ -318,11 +321,13 @@ choiceContainers.forEach(container => {
             selectedChoice.children[1].innerText = '👏🏼'
             currentQuestionIcon.innerText = '👏🏼'
             incrementScore();
+            winSound.play();
         }
         else {
             validation = 'incorrect';
             selectedChoice.children[1].innerText = '💩'
             currentQuestionIcon.innerText = '💩'
+            loseSound.play();
         }
 
         // Timeout before new question appears
