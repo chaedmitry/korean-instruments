@@ -1,41 +1,41 @@
 //Audio
-let track = document.getElementById('track');
-let trackList = [
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackGayageum.mp3', //0
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackGeomungo.mp3', //1
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackAjaeng.mp3', //2
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackHaegeum.mp3', //3
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangBipa.mp3', //4
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackJanggo.mp3', //5
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackJing.mp3', //6
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackBuk.mp3', //7
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackKkwaenggwari.mp3', //8
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackSogo.mp3', //9
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackDaegeum.mp3', //10
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackTaepyeongso.mp3', //11
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackDanso.mp3', //12
-    'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangPiri.mp3' //13
-] 
+const track = document.getElementById('track');
+const trackList = [
+    'sounds/trackGayageum.mp3', //0
+    'sounds/trackGeomungo.mp3', //1
+    'sounds/trackAjaeng.mp3', //2
+    'sounds/trackHaegeum.mp3', //3
+    'sounds/trackHyangBipa.mp3', //4
+    'sounds/trackJanggo.mp3', //5
+    'sounds/trackJing.mp3', //6
+    'sounds/trackBuk.mp3', //7
+    'sounds/trackKkwaenggwari.mp3', //8
+    'sounds/trackSogo.mp3', //9
+    'sounds/trackDaegeum.mp3', //10
+    'sounds/trackTaepyeongso.mp3', //11
+    'sounds/trackDanso.mp3', //12
+    'sounds/trackHyangPiri.mp3' //13
+];
 
-// Icons
-let iconList = [
-    'iconGayageum',
-    'iconGeomungo',
-    'iconAjaeng',
-    'iconHaegeum',
-    'iconBipa',
-    'iconJanggo',
-    'iconJing',
-    'iconBuk',
-    'iconKkwaenggwari',
-    'iconSogo',
-    'iconDaegeum',
-    'iconTaepyongso',
-    'iconDanso',
-    'iconHyangPiri'
-]
+// Instrument mapping
+const instruments = [
+    { name: 'gayageum', index: 0, icon: 'iconGayageum' },
+    { name: 'geomungo', index: 1, icon: 'iconGeomungo' },
+    { name: 'ajaeng', index: 2, icon: 'iconAjaeng' },
+    { name: 'haegeum', index: 3, icon: 'iconHaegeum' },
+    { name: 'hyangbipa', index: 4, icon: 'iconBipa' },
+    { name: 'janggo', index: 5, icon: 'iconJanggo' },
+    { name: 'jing', index: 6, icon: 'iconJing' },
+    { name: 'buk', index: 7, icon: 'iconBuk' },
+    { name: 'kkwaenggwari', index: 8, icon: 'iconKkwaenggwari' },
+    { name: 'sogo', index: 9, icon: 'iconSogo' },
+    { name: 'daegeum', index: 10, icon: 'iconDaegeum' },
+    { name: 'taepyeongso', index: 11, icon: 'iconTaepyongso' },
+    { name: 'danso', index: 12, icon: 'iconDanso' },
+    { name: 'hyangpiri', index: 13, icon: 'iconHyangPiri' }
+];
 
-playPause = (i) => {
+const playPause = (i) => {
     if (track.paused) {
         track.src = trackList[i];
         track.play();
@@ -47,40 +47,39 @@ playPause = (i) => {
         track.src = trackList[i];
         track.play();
     }
-}
+};
 
-swapIcon = (iconID) => {
+const swapIcon = (iconID) => {
     if (!track.paused) {
         document.getElementById(iconID).setAttribute('href','#icon-pause');
-        iconList.forEach(icon => {
-            if (icon !== iconID) {
-                document.getElementById(icon).setAttribute('href', '#icon-play');
+        instruments.forEach(instrument => {
+            if (instrument.icon !== iconID) {
+                document.getElementById(instrument.icon).setAttribute('href', '#icon-play');
             }
         });
     }
     else {
         document.getElementById(iconID).setAttribute('href','#icon-play');
     }
-}
+};
+
 // Swap all icons to "Play" when track is ended
 track.addEventListener('ended', e => {
-    iconList.forEach(icon => {
-        document.getElementById(icon).setAttribute('href', '#icon-play');
-    })
-})
+    instruments.forEach(instrument => {
+        document.getElementById(instrument.icon).setAttribute('href', '#icon-play');
+    });
+});
 
-// Listening clicks on instruments
-document.querySelector('li[data-instrument="gayageum"]').addEventListener('click', () => {playPause(0);swapIcon('iconGayageum');});
-document.querySelector('li[data-instrument="geomungo"]').addEventListener('click', () => {playPause(1);swapIcon('iconGeomungo');});
-document.querySelector('li[data-instrument="ajaeng"]').addEventListener('click', () => {playPause(2);swapIcon('iconAjaeng');});
-document.querySelector('li[data-instrument="haegeum"]').addEventListener('click', () => {playPause(3);swapIcon('iconHaegeum');});
-document.querySelector('li[data-instrument="hyangbipa"]').addEventListener('click', () => {playPause(4);swapIcon('iconBipa');});
-document.querySelector('li[data-instrument="janggo"]').addEventListener('click', () => {playPause(5);swapIcon('iconJanggo');});
-document.querySelector('li[data-instrument="jing"]').addEventListener('click', () => {playPause(6);swapIcon('iconJing');});
-document.querySelector('li[data-instrument="buk"]').addEventListener('click', () => {playPause(7);swapIcon('iconBuk');});
-document.querySelector('li[data-instrument="kkwaenggwari"]').addEventListener('click', () => {playPause(8);swapIcon('iconKkwaenggwari');});
-document.querySelector('li[data-instrument="sogo"]').addEventListener('click', () => {playPause(9);swapIcon('iconSogo');});
-document.querySelector('li[data-instrument="daegeum"]').addEventListener('click', () => {playPause(10);swapIcon('iconDaegeum');});
-document.querySelector('li[data-instrument="taepyeongso"]').addEventListener('click', () => {playPause(11);swapIcon('iconTaepyongso');});
-document.querySelector('li[data-instrument="danso"]').addEventListener('click', () => {playPause(12);swapIcon('iconDanso');});
-document.querySelector('li[data-instrument="hyangpiri"]').addEventListener('click', () => {playPause(13);swapIcon('iconHyangPiri');});
+// Event delegation for instrument clicks
+document.getElementById('grid').addEventListener('click', (e) => {
+    const gridItem = e.target.closest('.grid-item');
+    if (!gridItem) return;
+    
+    const instrumentName = gridItem.dataset.instrument;
+    const instrument = instruments.find(inst => inst.name === instrumentName);
+    
+    if (instrument) {
+        playPause(instrument.index);
+        swapIcon(instrument.icon);
+    }
+});
