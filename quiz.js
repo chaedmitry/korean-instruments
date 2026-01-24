@@ -34,7 +34,7 @@ let score = 0;
 // All questions
 let questions = [
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackGayageum.mp3',
+    question: 'sounds/trackGayageum.mp3',
     
     choice1: 'Gayageum',
     choicepic1: 'img/instruments-small/gayageum-small.svg',
@@ -51,7 +51,7 @@ let questions = [
     answer: 1
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackJanggo.mp3',
+    question: 'sounds/trackJanggo.mp3',
     choice1: 'Jing',
     choicepic1: 'img/instruments-small/jing-small.svg',
 
@@ -68,7 +68,7 @@ let questions = [
 },
 
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackHaegeum.mp3',
+    question: 'sounds/trackHaegeum.mp3',
     choice1: 'Ajaeng',
     choicepic1: 'img/instruments-small/ajaeng-small.svg',
 
@@ -84,7 +84,7 @@ let questions = [
     answer: 3
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangPiri.mp3',
+    question: 'sounds/trackHyangPiri.mp3',
     choice1: 'Taepyeongso',
     choicepic1: 'img/instruments-small/taepyeongso-small.svg',
 
@@ -100,7 +100,7 @@ let questions = [
     answer: 4
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackKkwaenggwari.mp3',
+    question: 'sounds/trackKkwaenggwari.mp3',
     choice1: 'Jing',
     choicepic1: 'img/instruments-small/jing-small.svg',
 
@@ -116,7 +116,7 @@ let questions = [
     answer: 2
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackSogo.mp3',
+    question: 'sounds/trackSogo.mp3',
     choice1: 'Janggo',
     choicepic1: 'img/instruments-small/janggo-small.svg',
 
@@ -132,7 +132,7 @@ let questions = [
     answer: 4
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackAjaeng.mp3',
+    question: 'sounds/trackAjaeng.mp3',
     choice1: 'Hyang Piri',
     choicepic1: 'img/instruments-small/hyangpiri-small.svg',
 
@@ -148,7 +148,7 @@ let questions = [
     answer: 2
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackGeomungo.mp3',
+    question: 'sounds/trackGeomungo.mp3',
     choice1: 'Haegeum',
     choicepic1: 'img/instruments-small/haegeum-small.svg',
 
@@ -164,7 +164,7 @@ let questions = [
     answer: 3
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackBuk.mp3',
+    question: 'sounds/trackBuk.mp3',
     choice1: 'Buk',
     choicepic1: 'img/instruments-small/buk-small.svg',
     
@@ -180,7 +180,7 @@ let questions = [
     answer: 1
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackDaegeum.mp3',
+    question: 'sounds/trackDaegeum.mp3',
     choice1: 'Danso',
     choicepic1: 'img/instruments-small/danso-small.svg',
     
@@ -196,7 +196,7 @@ let questions = [
     answer: 3
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackTaepyeongso.mp3',
+    question: 'sounds/trackTaepyeongso.mp3',
     choice1: 'Haegeum',
     choicepic1: 'img/instruments-small/haegeum-small.svg',
 
@@ -212,7 +212,7 @@ let questions = [
     answer: 2
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackDanso.mp3',
+    question: 'sounds/trackDanso.mp3',
     choice1: 'Danso',
     choicepic1: 'img/instruments-small/danso-small.svg',
 
@@ -228,7 +228,7 @@ let questions = [
     answer: 1
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackJing.mp3',
+    question: 'sounds/trackJing.mp3',
     choice1: 'Jing',
     choicepic1: 'img/instruments-small/jing-small.svg',
 
@@ -244,7 +244,7 @@ let questions = [
     answer: 1
 },
 {
-    question: 'https://chaedmitry.github.io/korean-instruments/sounds/trackHyangBipa.mp3',
+    question: 'sounds/trackHyangBipa.mp3',
     choice1: 'Geomungo',
     choicepic1: 'img/instruments-small/geomungo-small.svg',
 
@@ -289,12 +289,21 @@ getNewQuestion = () => {
     choicePics.forEach(pic => {
         const number = pic.dataset['number'];
         pic.src = currentQuestion['choicepic' + number];
-    })
+        const choiceName = currentQuestion['choice' + number];
+        pic.alt = choiceName + ' illustration';
+    });
 
     // Fetch choice text from question object and insert to every choice
     choiceTexts.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
+    });
+
+    // Update aria-labels for choice containers
+    choiceContainers.forEach(container => {
+        const number = container.querySelector('.choice-text').dataset['number'];
+        const choiceName = currentQuestion['choice' + number];
+        container.setAttribute('aria-label', choiceName);
     });
 
     // Remove this question from available questions
@@ -303,41 +312,59 @@ getNewQuestion = () => {
     acceptingAnswers = true;
 };
 
+const handleChoiceSelection = (container) => {
+    if(!acceptingAnswers) return;
+    acceptingAnswers = false;
+
+    // Get the choice container regardless of which child element was clicked
+    const selectedChoice = container.closest('.choice-container');
+    if (!selectedChoice) return;
+    
+    const choiceText = selectedChoice.querySelector('.choice-text');
+    const selectedAnswer = choiceText.dataset['number'];
+
+    // Current question icon in progress bar
+    let currentQuestionIcon = document.getElementById('progress-icon-'+questionCounter);
+
+    // Correct or incorrect answer
+    let validation = '';
+    if (selectedAnswer == currentQuestion.answer) {
+        validation = 'correct';
+        choiceText.innerText = '👏🏼'
+        currentQuestionIcon.innerText = '👏🏼'
+        currentQuestionIcon.setAttribute('aria-label', 'Question ' + questionCounter + ': Correct');
+        incrementScore();
+        winSound.play();
+    }
+    else {
+        validation = 'incorrect';
+        choiceText.innerText = '💩'
+        currentQuestionIcon.innerText = '💩'
+        currentQuestionIcon.setAttribute('aria-label', 'Question ' + questionCounter + ': Incorrect');
+        loseSound.play();
+    }
+
+    // Timeout before new question appears
+    setTimeout(() => {
+        getNewQuestion();
+        // Set icon to "Play"
+        document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
+    }, 1000);
+};
+
 choiceContainers.forEach(container => {
     container.addEventListener('click', e => {
-        if(!acceptingAnswers) return;
-        acceptingAnswers = false;
-
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.children[1].dataset['number'];
-
-        // Current question icon in progress bar
-        let currentQuestionIcon = document.getElementById('progress-icon-'+questionCounter);
-
-        // Correct or incorrect answer
-        let validation = '';
-        if (selectedAnswer == currentQuestion.answer) {
-            validation = 'correct';
-            selectedChoice.children[1].innerText = '👏🏼'
-            currentQuestionIcon.innerText = '👏🏼'
-            incrementScore();
-            winSound.play();
+        handleChoiceSelection(e.target);
+    });
+    
+    // Add keyboard support
+    container.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleChoiceSelection(e.target);
         }
-        else {
-            validation = 'incorrect';
-            selectedChoice.children[1].innerText = '💩'
-            currentQuestionIcon.innerText = '💩'
-            loseSound.play();
-        }
-
-        // Timeout before new question appears
-        setTimeout(() => {
-            getNewQuestion();
-            // Set icon to "Play"
-            document.getElementById('icon-play-pause').setAttribute('href', '#icon-play');
-        }, 1000);
-    })
-})
+    });
+});
 
 incrementScore = () => {
     score++;

@@ -69,8 +69,8 @@
     </svg>
     <nav class='menu'>
         <ul class='nav-links'>
-            <li class='nav-item'><a class='normal-link' href='/korean-instruments/'>Instruments</a></li>
-            <li class='nav-item current'><a class='normal-link' href='/korean-instruments/quiz.html'>Quiz</a></li>
+            <li class='nav-item'><a class='normal-link' href='./'>Instruments</a></li>
+            <li class='nav-item current'><a class='normal-link' href='./quiz.html'>Quiz</a></li>
         </ul>
     </nav>
     <audio id='track' src='' type='audio/mpeg'></audio>
@@ -78,40 +78,40 @@
         
         <h2 id='question'>Listen and guess <span id='question-counter-text'>1/5</span></h2>
 
-        <button class="button-link no-select" id="button-play">
-            <svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="button-link no-select" id="button-play" aria-label="Play instrument sound">
+            <svg class="button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <use id='icon-play-pause' href='#icon-play'></use>
             </svg>
             <span>Listen</span>
         </button>
 
-        <div id='choices'>
-            <div class='choice-container no-select' tabindex="0">
-                <img class='choice-pic' data-number='1' src=''>
+        <div id='choices' role="group" aria-label="Answer choices">
+            <div class='choice-container no-select' tabindex="0" role="button" aria-label="Choice 1">
+                <img class='choice-pic' data-number='1' src='' alt=''>
                 <p class='choice-text' data-number='1'>Choice 1</p>
             </div>
-            <div class='choice-container no-select' tabindex="0">
-                <img class='choice-pic' data-number='2' src=''>
+            <div class='choice-container no-select' tabindex="0" role="button" aria-label="Choice 2">
+                <img class='choice-pic' data-number='2' src='' alt=''>
                 <p class='choice-text' data-number='2'>Choice 2</p>
             </div>
-            <div class='choice-container no-select' tabindex="0">
-                <img class='choice-pic' data-number='3' src=''>
+            <div class='choice-container no-select' tabindex="0" role="button" aria-label="Choice 3">
+                <img class='choice-pic' data-number='3' src='' alt=''>
                 <p class='choice-text' data-number='3'>Choice 3</p>
             </div>
-            <div class='choice-container no-select' tabindex="0">
-                <img class='choice-pic' data-number='4' src=''>
+            <div class='choice-container no-select' tabindex="0" role="button" aria-label="Choice 4">
+                <img class='choice-pic' data-number='4' src='' alt=''>
                 <p class='choice-text' data-number='4'>Choice 4</p>
             </div>
         </div>
-        <div id='progress'>
-            <p class='progress-item' id='progress-icon-1'>○</p>
-            <p class='progress-item' id='progress-icon-2'>○</p>
-            <p class='progress-item' id='progress-icon-3'>○</p>
-            <p class='progress-item' id='progress-icon-4'>○</p>
-            <p class='progress-item' id='progress-icon-5'>○</p>
+        <div id='progress' role="list" aria-label="Quiz progress">
+            <p class='progress-item' id='progress-icon-1' role="listitem" aria-label="Question 1: Not answered">○</p>
+            <p class='progress-item' id='progress-icon-2' role="listitem" aria-label="Question 2: Not answered">○</p>
+            <p class='progress-item' id='progress-icon-3' role="listitem" aria-label="Question 3: Not answered">○</p>
+            <p class='progress-item' id='progress-icon-4' role="listitem" aria-label="Question 4: Not answered">○</p>
+            <p class='progress-item' id='progress-icon-5' role="listitem" aria-label="Question 5: Not answered">○</p>
         </div>
 
-        <a href='/korean-instruments/quiz.html' id='restart' class='button-link no-select' style='display:none'>Start over</a>
+        <a href='./quiz.html' id='restart' class='button-link no-select' style='display:none'>Start over</a>
     </section>
     <footer>
         <section class='credits'>
